@@ -1,0 +1,1290 @@
+.mcdb{
+    width: 1500px;
+    margin-left: 1%;
+    margin-top: 10%;
+    padding-bottom: 50px;
+    z-index: 1;
+    
+
+}
+.mcp{
+    margin-top: -27%;
+    color: white;
+    font-size: 2em;
+    font-weight: 400;
+    margin-left: 5%;
+
+}
+body{
+    font-family: 'Poppins';
+}
+.mcd1{
+    font-size: 3.5em;
+    font-weight: 500;
+    margin-top: -1.5%;
+    margin-left: 5%;
+    color: rgb(255, 255, 255);
+
+}
+.mbr{
+    margin-left: 60%;
+    margin-top: -19%;
+}
+.rate{
+    margin-left: 55%;
+    margin-top: -17%;
+}
+.r1{
+    margin-top: -50%;
+}
+.min{
+    background-color: transparent;
+    width: 350px;
+    height: 8vh;
+    border-radius: 35px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: -7%;
+    border: 1.5px solid white ;
+    color: white;
+}
+.min2{
+    background-color: transparent;
+    width: 350px;
+    height: 8vh;
+    border-radius: 35px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 29%;
+    margin-top: -7%;
+    border: 1.5px solid white ;
+    color: white;
+}
+.mo{
+    margin-left: 20%;
+    font-weight: 500;
+    margin-top: -11%;
+}
+.notes{
+    margin-top: 4%;
+    margin-left: 5%;
+}
+.opens{
+    background-color:  #FC8A06;
+    
+    width: 350px;
+    height: 8vh;
+ 
+    z-index: 2;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    border-radius: 0 15px 15px 0;
+    color: white;
+}
+.op{
+    margin-top: -9%;
+    margin-left: 25%;
+}
+.clock{
+    margin-top: 4%;
+    margin-left: 10%;
+}
+.ao{
+    margin-top: 9%;
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+    margin-left: 5%;
+}
+.sem{
+    background-color: transparent;
+    width: 350px;
+    height: 8vh;
+    border-radius: 35px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 73%;
+    margin-top: -6%;
+    border: 1.5px solid rgb(0, 0, 0) ;
+    color: rgb(0, 0, 0);
+    text-align: center; 
+    
+}
+.sem::placeholder{
+   font-size: 1.5em;
+   font-weight: 600;
+   
+}
+.sm{
+   margin-left: 75%;
+   position: absolute;
+   margin-top: -5%;
+}
+.cl{
+    background-color:  #FC8A06;
+    width: 100%;
+    height: 10vh;
+    margin-left: 1%;
+    margin-top: 4%;
+    position: absolute;
+}
+.cl2{
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    margin-top: -0.5%;
+    margin-left: 10%;
+    
+}
+.cl3{
+    margin-top: 2.5%;
+    margin-left: -5.1%;
+    color: #ffffff;
+    font-weight: 700;
+}
+.promo{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 13%;
+    gap: 30px;
+    margin-left: 2%;
+    flex-wrap: wrap;
+    width: calc(100% - 200px);
+}
+.fod,.vd,.ice{
+    
+
+    width: 100%; 
+    max-width: 400px;
+    flex-grow: 1; 
+    
+}
+.promo.cart-active {
+    width: calc(100% - 400px); /* Reduce width when cart is visible */
+    
+}
+.ice.cart-active{
+    margin-left: 40%;
+}
+
+
+.cart-box {
+    position: absolute;
+    top: 137%; /* Adjust based on your layout */
+    right: 2%;
+    width: 350px;
+    height: 500px;
+    background-color: #a5a5a5;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden initially */
+    z-index: 100;
+}
+
+.cart-box.active {
+    display: block; /* Show cart when active */
+}
+
+.cartbutton{
+    background-color: #e70101;
+    padding: 50px;
+    
+}
+.bugs1{
+    font-size: 4em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 40%;
+    margin-left: 5%;
+    
+}
+
+
+.burges{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-top: -32%;
+    width: 100%;
+}
+.burges.cart-active {
+    width: calc(100% - 100px); /* Reduce width when cart is visible */
+    gap: 20px; /* Optional: Adjust the space between bur3 and bur4 */
+}
+
+.bur1, .bur2, .bur3, .bur4 {
+    width: 450px; 
+    margin-left: -10%;
+    margin-top: 115%;
+}
+
+.bur2 {
+    margin-left: -16%;
+}
+
+.bur3 {
+    margin-left: -21%;
+}
+
+.bur4 {
+    margin-top: 170%;
+    margin-left: -309%;
+}
+
+/* When cart is active, adjust the position of bur3 and bur4 */
+.burges.cart-active .bur3 {
+    margin-left: -120%; /* Adjust bur3's position to be next to bur4 */
+    margin-top: 170%; /* Adjust if necessary */
+    order: 2; /* Ensure bur3 comes after bur4 */
+}
+
+.burges.cart-active .bur4 {
+    order: 1; /* Ensure bur4 stays before bur3 */
+    margin-left: -324%;
+}
+
+.burges.cart-active{
+    margin-top: -20%;
+    margin-left: 10%;
+}
+
+.burges.cart-active .bugs1 {
+   margin-top: 30%;
+   margin-left: -140%;
+}
+.bugs2{
+
+    font-size: 4em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 40%;
+    margin-left: 5%;
+    
+}
+
+.fries1{
+    font-size: 4em;
+    font-weight: 600;
+    color: black;
+    margin-top: 40%;
+    margin-left: 5%;
+    
+}
+
+
+.fries{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-left: -10%;
+    margin-top: 8%;
+    width: 100%;
+}
+.fries.cart-active {
+    width: calc(100% - 100px); /* Reduce width when cart is visible */
+    gap: 20px; /* Optional: Adjust the space between bur3 and bur4 */
+}
+
+.fri1, .fri2, .fri3, .fri4 {
+    width: 450px; 
+    margin-left: -10%;
+    margin-top: 115%;
+}
+
+.fri2 {
+    margin-left: -16%;
+}
+
+.fri3 {
+    margin-left: -21%;
+}
+
+.fri4 {
+    margin-top: 170%;
+    margin-left: -309%;
+}
+
+/* When cart is active, adjust the position of bur3 and bur4 */
+.fries.cart-active .fri3 {
+    margin-left: -120%; /* Adjust bur3's position to be next to bur4 */
+    margin-top: 170%; /* Adjust if necessary */
+    order: 2; /* Ensure bur3 comes after bur4 */
+}
+
+.fries.cart-active .fri4 {
+    order: 1; /* Ensure bur4 stays before bur3 */
+    margin-left: -324%;
+}
+
+.fries.cart-active{
+    margin-top: 20%;
+    margin-left: -30%;
+}
+
+.fries.cart-active .fries1 {
+   margin-top: 30%;
+   margin-left: -140%;
+}
+.fries2{
+
+    font-size: 4em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 40%;
+    margin-left: 5%;
+    
+}
+
+.fries.cart-active .fries2 {
+    margin-top: 30%;
+    margin-left: 30%;
+    color: rgb(255, 255, 255);
+    
+ }
+
+.fr2{
+    margin-top: -100%;
+    margin-left: 90%;
+}
+
+
+.drinks1{
+    font-size: 4em;
+    font-weight: 600;
+    color: black;
+    margin-top: 40%;
+    margin-left: 5%;
+    
+}
+
+
+.drinks{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-left: -12%;
+    margin-top: 50%;
+    width: 100%;
+}
+.drinks.cart-active {
+    width: calc(100% - 100px); /* Reduce width when cart is visible */
+    gap: 20px; /* Optional: Adjust the space between bur3 and bur4 */
+}
+
+.dri1, .dri2, .dri3, .dri4 {
+    width: 450px; 
+    margin-left: -10%;
+    margin-top: 115%;
+}
+
+.dri2 {
+    margin-left: -16%;
+}
+
+.dri3 {
+    margin-left: -21%;
+}
+
+.dri4 {
+    margin-top: 170%;
+    margin-left: -309%;
+}
+
+/* When cart is active, adjust the position of bur3 and bur4 */
+.drinks.cart-active .dri3 {
+    margin-left: -120%; /* Adjust bur3's position to be next to bur4 */
+    margin-top: 170%; /* Adjust if necessary */
+    order: 2; /* Ensure bur3 comes after bur4 */
+}
+
+.drinks.cart-active .dri4 {
+    order: 1; /* Ensure bur4 stays before bur3 */
+    margin-left: -324%;
+}
+
+.drinks.cart-active{
+    margin-top: 60%;
+    margin-left: -33%;
+}
+
+.drinks.cart-active .drinks1 {
+   margin-top: 30%;
+   margin-left: -140%;
+}
+.drinks2{
+
+    font-size: 4em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 40%;
+    margin-left: 5%;
+   
+    
+}
+
+.drinks.cart-active .drinks2 {
+    margin-top: 30%;
+    margin-left: 30%;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+    
+ }
+
+.dr2{
+    margin-top: -100%;
+    margin-left: 83%;
+    
+}
+.dr3{
+    margin-top: -79%;
+    margin-left: 160%;
+}
+.btns{
+    background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Make it look clickable */
+
+}
+
+
+.plus{
+    margin-top: -20%;
+    width: 40px;
+    margin-left: 23%;
+}
+.plus2{
+    margin-top: -19%;
+    margin-left: 58%;
+    position: relative;
+    z-index: 1;
+   visibility: hidden;
+    
+}
+
+.wb{
+margin-top: 120%;
+position: absolute;
+background: linear-gradient(to right, #FBFBFB 60%, #03081F 50%);
+width: 95%;
+margin-left: 3%;
+height: 80vh;
+border-radius: 15px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add this */
+
+
+}
+.heds{
+font-size: 1.6em;
+position: absolute;
+display: flex;
+flex-direction: row;
+gap: 185px;
+font-weight: 600;
+margin-left: 9%;
+margin-top: 8%;
+color: #000;
+}
+
+.ot{
+    color: white;
+    margin-left: 5%;
+}
+.pi{
+position: absolute;
+display: flex;
+flex-direction: row;
+margin-top: 0.5%;
+gap: 345px;
+margin-left: 5%;
+margin-top: 9%;
+}
+.track{
+    width: 70px;
+    margin-top: 1%;
+    height: 6vh;
+    margin-left: -5%;
+}
+.id5{
+    width: 50px;
+    height: 6vh;
+    margin-left: 6%;
+    margin-top: 1%;
+}
+.clock{
+    width: 50px;
+    height: 6vh;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+.di{
+    margin-left: -5%;
+}
+
+.days{
+    margin-top: 15%;
+    margin-left: 2%;
+    color: #000;
+    font-weight: 600;
+}
+
+.time{
+    margin-top: -22.1%;
+    margin-left: 10%;
+    color: #000;
+}
+.time1{
+margin-left: -3.2%;
+}
+.time2
+{
+    margin-left: -3%;
+}
+.time3{
+    margin-left: -1%;
+}
+
+.time4{
+    margin-left: -2.5%;
+}
+
+.time5{
+    margin-left: -4.5%;
+}
+
+.time6{
+    margin-left: -2.5%;
+}
+.time7{
+    margin-left: -3.5%;
+}
+.time8{
+    margin-left: 9.5%;
+}
+
+.infor{
+margin-left: 34%;
+margin-top: -22.2%;
+color: #000;
+}
+.ph1{
+    font-weight: 700;
+}
+.web{
+    font-weight: 700;
+    margin-top: -1%;
+}
+.ph2{
+    font-size: 1.4em;
+    margin-top: 1%;
+}
+.li{
+    font-size: 1.2em;
+}
+.clc{
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 70%;
+    margin-top: -23%;
+}
+
+.clc1{
+    margin-left: 78%;
+    margin-top: -19.4%;
+    color: #ffffff;
+}
+.cl2{
+margin-left: -12%;
+}
+.cl8{
+margin-left: -12%;
+}
+.cl4{
+    margin-left: -4%;
+}
+.cl5{
+    margin-left: -10%;
+}
+.cl6{
+    margin-left: -18%;
+}
+.cl7{
+    margin-left: -11%;
+}
+.cl9{
+    margin-left: -14%;
+}
+.maps{
+    margin-top: 10%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add this */
+    z-index: 1;
+}
+
+.wb.cart-active{
+    margin-top: 140%;
+}
+
+.mbox{
+    background-color: #03081FF7;
+    width: 500px;
+    position: absolute;
+    height: 90vh;
+    margin-top: -55%;
+    margin-left:15%;
+    z-index: 2;
+    border-radius: 15px;
+    color: #ffffff;
+}
+.dol{
+font-weight: 700;
+font-size: 2em;
+}
+.pel{
+    margin-left: 10%;
+    margin-top: 20%;
+}
+.city{
+    color: #FC8A06;
+    font-size: 1.2em;
+    margin-top: -5%;
+}
+.add{
+    margin-top: 10%;
+}
+
+.num1{
+    font-weight: 700;
+    margin-top: 7%;
+    font-size: 1.2em;
+}
+.num2{
+    color: #FC8A06;
+    font-size: 1.8em;
+    margin-left: -3%;
+    margin-top: -1%;
+}
+
+.we1{
+    margin-top: 7%;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.we2{
+    color: #FC8A06;
+    font-size: 1.8em;
+    margin-left: -1%;
+    margin-top: -1%;
+}
+
+.icons1{
+    background-color: #FBFBFB;
+    padding: 5px;
+    border-radius: 20px;
+    width: 190px;
+    height: 7vh;
+    margin-left: 180%;
+    margin-top: -100%;
+    box-shadow: 15px 8px 20px rgba(0, 0, 0, 0.2); /* Add this */
+    color: #000;
+}
+.im{
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 1%;
+    margin-left: 10%;
+
+}
+.sl{
+    margin-top: -8%;
+    margin-left: 10%;
+}
+.eli1{
+  width: 60px;
+ 
+  margin-left: 210%;
+  margin-top: -17%;
+  position: absolute;
+ 
+}
+.mark{
+    margin-left: 211.5%;
+    position: absolute;
+    margin-top: -15.5%;
+}
+.re1{
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 600px;
+    margin-top: 235%;
+    margin-left: 0.8%;
+    
+    
+    
+}
+.cr2{
+    color: #000;
+    font-size: 3em;
+    font-weight: 700;
+    position: absolute;
+    z-index: 5;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.selectors{
+position: absolute;
+display: flex;
+flex-direction: row;
+margin-left: 75%;
+margin-top: 5%;
+gap: 20px;
+}
+
+.re1.cart-active{
+    margin-top: 255%;
+}
+
+.revbox{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+    gap: 40px;
+    margin-left: 7%;
+
+}
+
+.revi1,.revi2,.revi3{
+    width: 400px;
+  
+    
+}
+.tr{
+    margin-top: -6%;
+    margin-left: 45%;
+    position: absolute;
+
+}
+
+.resicons{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin-left: 4%;
+}
+.mc1,.pj1,.kf1,.te1,.bk1,.sh1{
+    width: 180px;
+}
+.res1{
+    font-size: 2em;
+    color: #000;
+    font-weight: 700;
+    margin-top: 10%;
+    margin-left: 4%;
+}
+.final2{
+    position: absolute;
+    margin-top: 20%;
+    width: 100%;
+}
+.cart-box{
+    margin-top: 50%;
+}
+.bur1,.bur2,.bur3,.bur4,.fri1,.fri2,.fri3,.fri4,.dri1,.dri2,.dri3,.dri4{
+     cursor: pointer;
+
+     
+}
+
+
+
+.cartItem{
+background-color: #F9F9F9;
+
+
+}
+.bur3,.bur4{
+    
+}
+
+.adbtn{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 10;
+    margin-top: 11%;
+    gap: 150px;
+    margin-left: 18.5%;
+}
+.adder2{
+    margin-left: 210%;
+  
+}
+.adder3{
+    margin-left: 420%;
+
+}
+.adder4{
+    margin-left: -810%;
+   
+    margin-top: 268%;
+}
+
+.adbtn.cart-active{
+    margin-top: 23%;
+    margin-left: 10%;
+   
+}
+
+.adbtn.cart-active .adder1 {
+   
+    margin-left: 230%;
+    margin-top: -7%;
+  }
+  
+.adbtn.cart-active .adder2 {
+    margin-left: 465%;
+    margin-top: -7%;
+  }
+  
+.adbtn.cart-active .adder3 {
+   
+   margin-top: 272%;
+   margin-left: -310%;
+   margin-top: 278%;
+  }
+  
+.adbtn.cart-active .adder4 {
+    margin-left: -75%;
+    margin-top: 280%;
+  }
+  .fdbtn{
+    margin-top: 42%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 10;
+   
+    gap: 150px;
+    margin-left: 28.5%;
+  }
+.bdder1{
+    margin-left: 85%;
+    margin-top: 10%;
+    z-index: 12;
+}
+  .bdder2{
+    margin-left: 295%;
+    margin-top: 15%;
+    z-index: 13;
+  
+}
+.bdder3{
+    margin-left: 510%;
+    margin-top: 15%;
+    z-index: 14;
+
+}
+.bdder4{
+    margin-left: -725%;
+   
+    margin-top: 298%;
+    z-index: 15;
+    
+}
+.fdbtn.cart-active{
+    margin-top: 46%;
+    margin-left: 47%;
+
+ 
+   
+}
+
+.fdbtn.cart-active .bdder1 {
+   
+    margin-left: 239%;
+    margin-top: -7%;
+    z-index: 16;
+    
+  }
+  
+.fdbtn.cart-active .bdder2 {
+    margin-left: 470%;
+    margin-top: -7%;
+    z-index: 17;
+   
+  }
+  
+.fdbtn.cart-active .bdder3 {
+   
+  margin-top: -60%;
+   margin-left: -305%;
+   margin-top: 278%;
+   z-index: 18;
+  
+  
+  }
+  
+.fdbtn.cart-active .bdder4 {
+    margin-left: -65%;
+    margin-top: 280%;
+    z-index: 19;
+   
+     
+  }
+.cart-box{
+    height: 230vh;
+}
+
+.cdbtn{
+    margin-top: 42%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 10;
+   
+    gap: 150px;
+    margin-left: 31.9%;
+}
+.cdder1{
+    margin-left: 85%;
+    margin-top: 10%;
+    z-index: 21;
+}
+  .cdder2{
+    margin-left: 295%;
+    margin-top: 15%;
+    z-index: 22;
+  
+}
+.cdder3{
+    margin-left: 510%;
+    margin-top: 15%;
+    z-index: 23;
+
+}
+.cdder4{
+    margin-left: -725%;
+   
+    margin-top: 298%;
+    z-index: 24;
+    
+}
+
+.cdbtn.cart-active{
+    margin-top: 46%;
+    margin-left: 51%;
+
+ 
+   
+}
+
+.cdbtn.cart-active .cdder1 {
+   
+    margin-left: 238%;
+    margin-top: 2%;
+    z-index: 55;
+
+  }
+  
+.cdbtn.cart-active .cdder2 {
+    margin-left: 470%;
+    margin-top: -7%;
+    z-index: 26;
+   
+  }
+  
+.cdbtn.cart-active .cdder3 {
+   
+  margin-top: -60%;
+   margin-left: -305%;
+   margin-top: 278%;
+   z-index: 27;
+  
+  
+  }
+  
+.cdbtn.cart-active .cdder4 {
+    margin-left: -65%;
+    margin-top: 280%;
+    z-index: 28;
+   
+     
+  }
+.cart-box{
+    height: 230vh;
+    margin-left: 10%;
+    z-index: 5;
+    position: absolute;
+    margin-top: 15%;
+    background-color: #ffffff;
+}
+.adder1:hover,
+.adder2:hover,
+.adder3:hover,
+.adder4:hover,
+.bdder1:hover,
+.bdder2:hover,
+.bdder3:hover,
+.bdder4:hover,
+.cdder1:hover,
+.cdder2:hover,
+.cdder3:hover,
+.cdder4:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  cursor: pointer; /* Show pointer cursor */
+}
+.cbox1{
+    z-index: 1;
+    margin-top: 20%;
+}
+.itemsc{
+    background-color: #a4a4a4;
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+.cartItem{
+    font-weight: 500;
+}
+/* Cart Price Styling */
+.cartPrice {
+    font-weight: bold;
+    color: #028643;
+    font-size: 1.8rem;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+  
+  /* Total Amount Styling */
+  .cartTotal {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Blue shade */
+    text-align: right;
+  }
+  
+
+  /* Delete Button Styling */
+ 
+  
+  /* Quantity Styling */
+  .cartQuantity {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 30%;
+    color: white;
+    margin-top: 30px;
+  }
+  .cartele{
+    font-weight: 700;
+    color: #000;
+    margin-left: 30%;
+    margin-top: -8%;
+    height: 7vh;
+  
+   
+
+}
+.qty{
+    background-color:#FC8A06; 
+    height: 9vh;
+    width: 70px;
+    border-radius: 50px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: -32%;
+    position: absolute;
+}
+.qty2{
+    margin-top: -40%;
+}
+.delbtn{
+    margin-left: 84%;
+    margin-top: -11%;
+    position: absolute;
+    width: 40px;
+   
+}
+.lastbox{
+    height: 72vh;
+    background-color:#F9F9F9;
+
+    }    
+    
+    .cartTotal{
+        background-color: orange;
+        position: absolute;
+        padding: 40px;
+        width: 265px;
+        border-radius: 10px;
+        margin-left: 0.7%;
+       
+    }
+    .totalAmount {
+        color: #ffffff; /* Green shade */
+        margin-top: 50%;
+    
+        margin-left: 
+        -10%;
+        position: absolute;
+        margin-top: -1%;
+    
+       
+      }
+      .amount2{
+        position: absolute;
+        margin-left: 30%;
+        font-size: 2em;
+        margin-top: -6%;
+      }
+      .subTotal{
+        height: 40vh;
+        background-color:#F9F9F9;
+        
+      }
+
+      .subAmount1{
+font-size: 1.2em;
+margin-top: 21%;
+color: #000;
+font-weight: 600;
+margin-left: 10%;
+      } 
+      .sa1{
+        font-size: 1.6em;
+       margin-left: 50%;
+       position: absolute;
+       color: #878787;
+       margin-top: -11.5%;
+      }
+      .subAmount2{
+        font-size: 1.2em;
+        margin-top: 10%;
+        color: #000;
+        font-weight: 600;
+        margin-left: 10%;
+              } 
+              .sa2{
+                font-size: 1.6em;
+               margin-left: 50%;
+               position: absolute;
+               color: #878787;
+               margin-top: -11%;
+
+              }
+              .subAmount3{
+                font-size: 1.2em;
+                margin-top: 10%;
+                color: #000;
+                font-weight: 600;
+                margin-left: 10%;
+                      } 
+                      .sa3{
+                        font-size: 1.6em;
+                       margin-left: 55%;
+                       position: absolute;
+                       color: #878787;
+                       margin-top: -9.9%;
+                      }
+
+
+.chose1{
+position: absolute;
+margin-top: 30%;
+margin-left: -88%;
+}
+.cpn2{
+position: absolute;
+margin-left: -88%;
+margin-top: 50%;
+
+} 
+.scd2{
+position: absolute;
+margin-top: 80%;
+margin-left: -85%;
+} 
+
+.store2{
+    position: absolute;
+margin-top: 80%;
+margin-left: -15%;
+width: 50px;
+}
+.line2{
+    position: absolute;
+    margin-top: 75%;
+    margin-left: -30%;
+}
+
+.coll{
+    position: absolute;
+    margin-top: 95%;
+    margin-left: 59%;
+    color: #a5a5a5;
+    font-size: 0.7em;
+}
+.tl{
+    position: absolute;
+    margin-top: 100%;
+    margin-left: 55%;
+    color: #a5a5a5;
+    font-size: 0.7em;
+
+}
+.stor{
+    margin-top: 10%;
+}
+.check1{
+    background-color: #028643;
+    margin-top: 110%;
+    position: absolute;
+    width: 320px;
+    height: 8vh;
+    margin-left: -85%;
+    color: white;
+}
+.ch{
+    margin-top: 113.5%;
+    position: absolute;
+    margin-left: -80%;
+    z-index: 10;
+}
+.carter{
+    margin-left: -.05%;
+    width: 350px;
+    margin-top: -30%;
+    position: absolute
+    ;
+}
+.sbtn{
+    margin-left: 73%;
+    position: absolute;
+    margin-top:11%;
+
+}
+button{
+    fill: none;
+    background-color:white;
+}
+
+.highlight {
+    border: 1px solid #ffcc00; /* Yellow highlight border */
+    border-radius: 8px;        /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5); /* Subtle glow effect */
+    margin-left: -5%;
+   
+  }
+  .hidden{
+    display: none;
+  }

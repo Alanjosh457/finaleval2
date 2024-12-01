@@ -1,0 +1,244 @@
+/* Fixes the header at the top of the page */
+.headerdiv {
+  background-color: #f1f1f1;
+ max-width:  1520px;
+  margin-top: -2%;
+  margin-left: -3%;
+  border-radius: 10px;
+  height: 13vh;
+  border: 3px solid #ededed;
+  display: flex;
+  justify-content: space-between; /* Distributes items across the container */
+  align-items: center; /* Vertically aligns all items */
+  padding: 0 10px; /* Adds padding inside the header */
+  position: fixed; /* Fixes the header at the top */
+  top: 0; /* Stays at the top */
+  left: 0; /* Aligns to the left */
+  right: 0; /* Aligns to the right */
+  z-index: 2000; /* Ensures header stays on top */
+  font-weight: 500;
+  font-family: 'Poppins';
+  color: black;
+  padding-left: 30px;
+  
+}
+
+.headcon {
+  display: flex;
+  flex-direction: row; /* Aligns items in a row */
+  gap: 10px;
+  align-items: center; /* Vertically aligns items in the row */
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: row; /* Aligns icon and text in a row */
+  font-size: 16px;
+  align-items: center; /* Ensures proper vertical alignment of the icon and text */
+}
+
+.icon {
+  width: 20px;
+  margin-right: 10px;
+  margin-left: -245%;
+}
+
+.promo {
+  font-family: 'Poppins';
+  font-weight: 800;
+  color: #FC8A06;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  margin-left: -25%;
+}
+
+.secondcon {
+  display: flex;
+  flex-direction: row; /* Aligns all items in a row */
+  gap: 10px;
+  align-items: center; /* Vertically aligns the items */
+  margin-left: 100px;
+}
+
+.icon2 {
+  width: 20px;
+  height: auto;
+  padding: 1px;
+}
+
+.promo2 {
+  color: #FC8A06;
+  text-decoration: underline;
+}
+
+/* Adjustments for cart icon */
+.cartIcon {
+  margin-top: 1%;
+  margin-left: 185%;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-left: 33%;
+  list-style: none;
+  margin-top: -2.5%;
+}
+
+
+
+.navbar-list li a {
+  color: black; /* Set text color */
+  font-weight: 500; /* Make the text bold */
+  text-decoration: none; /* Remove underline */
+  font-family: 'Poppins';
+
+}
+
+.signup {
+  background-color: black;
+  color: white;
+  border-radius: 35px;
+  padding: 20px 40px; /* Adjust padding for a consistent size */
+  width: auto; /* Adjust width to fit the text */
+  position: fixed; /* Keep the button fixed on the screen */
+  top: 13vh; /* Align with the navbar */
+  right: 6%; /* Position it on the right */
+  z-index: 10000; /* Ensure it stays above other elements */
+  font-family: 'Poppins';
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+.logo {
+  top: 9.3vh; /* Ensure it's fixed at the top */
+  left: 0; /* Align to the left */
+  z-index: 10000; /* Ensure it stays above other elements */
+  padding: 35px;
+  padding-right: 200px;
+
+  background-color: #ffffff;
+  position: fixed; /* Fixes the position */
+  margin-top: 0; /* Remove margin-top to prevent shifting */
+  margin-left: 10px; /* Adjust as needed */
+}
+
+.profile{
+  z-index: 30000;
+  margin-left: -131%;
+ 
+  
+}
+.pro2{
+  margin-left: -20%;
+}
+.tx1{
+  margin-top: -29%;
+}
+
+/* Fix the navbar and ensure it stays at the top */
+.navbar {
+  position: fixed;
+  top: 13vh; /* Adjust based on header height */
+  left: 0;
+  right: 0;
+
+  z-index: 3000;
+  height: 3;
+
+  margin-top: 5%;
+  margin-left: 28%;
+}
+
+ul {
+  margin-left: 0;
+  margin-left: 5%;
+  margin-top: 30%;
+}
+
+/* Ensure content doesn't go under the fixed header */
+
+.dd{
+  background-color: #ffffff;
+  width: 400%;
+  margin-top: 4%;
+  height: 10vh;
+  margin-left: 1%;
+  padding-top: 50px;
+  position: fixed;
+  z-index: 1;
+}
+.navLink a {
+  text-decoration: none; /* Remove underline */
+  color: #000000; /* Set default text color */
+  z-index: 4000;
+  
+  
+  
+
+ 
+}
+.navbarList{
+  background-color: rgb(255, 255, 255);
+  height: 10vh;
+  margin-top: -9.4%;
+  margin-left: 3%;
+  padding-top: 50px;
+
+}
+.navLink a:hover {
+  color: #ffffff; /* Change text color on hover */
+  background-color: #FC8A06;
+  padding: 12px;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Optional: Add hover effect for the Sign-Up button */
+.signup:hover {
+  background-color: #ffffff; /* Change button background on hover */
+  color: #000000; /* Change text color on hover */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.welcome{
+  font-size: 3em;
+  position: absolute;
+  color: #c31b1b;
+  z-index: 900000;
+  margin-top: 10%;
+}
+.tx2{
+  margin-top: -17%;
+  position: absolute;
+  margin-left: 20%;
+ 
+}
+.signup2{
+  background-color: black;
+  color: white;
+  border-radius: 35px;
+   /* Adjust padding for a consistent size */
+  width: 200px; /* Adjust width to fit the text */
+  position: fixed; /* Keep the button fixed on the screen */
+  top: 13vh; /* Align with the navbar */
+  right: 6%; /* Position it on the right */
+  z-index: 10000; /* Ensure it stays above other elements */
+  font-family: 'Poppins';
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+.profile2{
+  z-index: 30000;
+  margin-left: -90%;
+ 
+  
+}

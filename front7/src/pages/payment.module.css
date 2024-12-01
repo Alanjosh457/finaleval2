@@ -1,0 +1,182 @@
+h2{
+    margin-top: 50%;
+}
+.hdq{
+    font-size: 5em;
+}
+.dcs{
+   margin-top: 1%;
+}
+.ck{
+   margin-top: -12%;
+    margin-left: 2%;
+    position: absolute;
+}
+.co{
+    margin-top: -1%;
+    margin-left: 65%;
+    position: absolute;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding-top: 20px;
+}
+.pop{
+  
+}
+.amount{
+    width: 35%;
+    height: 20vh;
+    position: absolute;
+    
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 64%;
+    fill: none;
+    margin-top: -5%;
+    border-radius: 25px;
+
+    
+}
+.amt{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -4%;
+}
+
+.savedCards {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+  }
+  
+  .cardCircle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:#FFE8CE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FC8A06;
+    margin-top: 1%;
+    margin-left: 1%;
+  }
+  
+  .cardDisplay {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically center the items */
+    height: 5vh;
+ 
+  }
+  .cardName{
+     margin-left: 2%;
+  }
+  .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    width: 20%;
+    text-align: center;
+    margin-top: 2%;
+  }
+  
+  .popupTitle {
+   margin-top: -2%;
+  }
+  
+  .cardInput {
+    width: 60%;
+    padding: 10px;
+    ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    gap: 20px;
+  
+
+  }
+  
+  .popupButtons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  
+  .saveButton {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .saveButton:hover {
+    background-color: #218838;
+  }
+  
+  .cancelButton {
+    padding: 10px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancelButton:hover {
+    background-color: #c82333;
+  }
+  .savedCards{
+    margin-left: 2%;
+    margin-top: 2%;
+    border: 1px solid#FFE8CE;
+    border-radius: 20px;
+    height: 6vh;
+    width: 96%;
+  }
+  
+  .paymentContainer{
+    margin-top: 10%;
+  }
+
+  .frd{
+    margin-top: 30%;
+    width: 100%;
+    position: absolute;
+  }
+ .amtcon{
+ margin-top: -19%;
+ margin-left: 280%;
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.8em;
+
+ }
+
+ .pay{
+  z-index: 10;
+ }
+ .co{
+  z-index: 10;
+  cursor: pointer; /* Change mouse cursor to pointer */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+ }
+ .co:hover {
+  transform: scale(0.9); /* Slightly enlarge the element */
+ /* Add a shadow effect */
+}

@@ -1,0 +1,332 @@
+/* checkout.module.css */
+.chec {
+    display: flex;
+    flex-direction: column;
+   position: absolute;
+
+   margin-top: -2%;
+   margin-left: 1%;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column; /* Make the item name and price appear in a column */
+    margin-bottom: -50px;
+    margin-top: 50%;
+    margin-left: -30%;
+   
+  }
+  
+  .itemName {
+    font-weight: bold;
+    display: inline;
+    padding-top:30px ;
+   
+    
+  }
+  
+  .itemQuantity {
+    display: block; /* Ensures the quantity appears on the next line */
+    margin-top: 5%;
+    color: rgb(162, 160, 160); /* Adds some space between price and quantity */
+    font-size: 0.9em;
+   
+  }
+  .ip{
+    margin-top: 5%;
+    color: green;
+    margin-left: 50%;
+   font-size: 1.5em;
+   font-weight: 700;
+   position: absolute;
+  
+
+  }
+
+  .cartinfo{
+
+    display: inline;
+    margin-left:70%;
+    color: blueviolet;
+    position: absolute;
+    z-index: 3;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    width: 400px;
+
+
+
+    
+  }
+  .checkbox {
+    width: 900px;
+    fill: none;
+    border: solid 2px black;
+    position: absolute;
+    margin-top: -3%;
+    margin-left: 1%;
+    border-radius: 10px;
+    height: 340px; /* Set a height to allow for scrolling */
+    padding: 40px;
+ /* Adjust if needed */
+    overflow-y: auto; /* Make it scrollable vertically */
+    /* Add space for scrollbar if necessary */
+  }
+  
+  
+  .item::after {
+    content: "";
+    display: block;
+    width: 590%;
+    height: 1px;
+    background-color: #4a4a4a; /* Line color */
+    margin-top: 10px; /* Add space between content and the line */
+  }
+
+  .item:not(:last-child) {
+    border-bottom: none; /* Line color */
+    padding-bottom: 19px;
+   
+  }
+
+  
+.notescon {
+    position: absolute; /* Positioned relative to .checkbox */
+    bottom: 85px; /* Adjust the bottom distance from the container */
+    width: 100%; /* Ensure it takes up the full width of the .checkbox */
+    text-align: center; /* Optional: Center the content */
+  
+    margin-left: -50%;
+    
+  }
+  
+  .pl {
+    position: absolute; /* Positioned relative to .checkbox */
+    bottom: 27px; /* Aligns it exactly at the bottom */
+    width: 85%; /* Ensure it takes up the full width of the .checkbox */
+    height: 7vh;
+    border-radius: 25px;
+   
+
+    margin-left: -1%;
+    padding-right: 70px;
+    transition: opacity 0.3s ease;
+   
+    
+  }
+  .osc{
+    background-color: white;
+  }
+
+  .itemName{
+    margin-top: -50%;
+    margin-left: 60%;
+  }
+  .itemQuantity{
+    margin-left: 80%;
+    color: #83858A;
+  }
+  .hd2{
+    margin-top: -10%;
+    position: absolute;
+    margin-left: 2%;
+  }
+  .subtotal{
+    margin-left: 70%;
+    position: absolute;
+    margin-top: 6%;
+
+  }
+  .ordele{
+    margin-top: 15%;
+  }
+  .classImage{
+    width: 80px;
+    margin-top: -40%;
+    position: absolute;
+  }
+  .delebtn{
+   position: absolute;
+   margin-left: 70%;
+   margin-top: -5%;
+    }
+  .drk{
+    width: 80px;
+   position: absolute;
+    margin-top: -40%;
+  }
+  .itemPriceContainer{
+    margin-top: 10%;
+    margin-left: 50%;
+    padding-bottom: 100px;
+    
+  }
+  .itemname{
+    margin-left: 49%;
+    margin-top: -38%;
+    
+  
+  }
+  .itemprice{
+    margin-left: 350%;
+    margin-top: -10%;
+    color: #028643;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+  .ite{
+    margin-top: 10%;
+  }
+  .de2{
+    width: 450px;
+    margin-left: -4%;
+  }
+  .subtotal{
+    margin-top: 15%;
+  }
+  .cartinfo{
+    color:#83858A;
+  }
+  .ci{
+    margin-left: 723%;
+   
+ 
+  }
+  .ci2{
+    color:#83858A;
+    margin-top: 60%;
+    margin-left: 90%;
+  }
+.lci{
+  display: flex;
+  flex-direction: row;
+  margin-left: 313%;
+
+}
+.lci2{
+  gap: 150px;
+  margin-top: 10%;
+}
+.sci{
+  display: flex;
+  flex-direction: row;
+  margin-left: 353%;
+ 
+}
+.Sci2{
+  gap: 150px;
+  margin-left: -40%;
+  position: absolute;
+}
+
+
+.fci{
+  display: flex;
+  flex-direction: row;
+  margin-left: 313%;
+ 
+}
+.listi{
+  margin-left: 15%;
+  position: absolute;
+  margin-top: 4%;
+
+}
+
+.sales{
+  color:#83858A;
+ position: absolute;
+ margin-left: 70%;
+ margin-top: 3%;
+ 
+}
+
+
+.check2{
+  margin-left: 200%;
+  margin-top: -16%;
+}
+
+.check3{
+  margin-top: 20%;
+}
+.check4{
+  margin-left: 30%;
+  margin-top: -13.5%;
+}
+.check5{
+  margin-left: 200%;
+  margin-top: -15%;
+}
+
+.check6{
+  margin-top: 40%;
+  font-size: 1.2em;
+}
+.check7{
+  margin-left: 200%;
+  margin-top: -16%;
+  font-weight: 800;
+  color: #000;
+  font-size: 1.1em;
+}
+.liners{
+  position: absolute;
+  margin-left: 65%;
+  
+}
+.le2,.le3{
+  width: 400px;
+  margin-left: 20%;
+}
+.le3{
+  margin-top: 35%;
+}
+.pay{
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 15%;
+}
+.itemprice{
+  margin-left: 550%;
+ 
+}
+.itemname{
+  margin-left: 130%;
+  
+
+}
+.itemQuantity{
+  margin-left: 80%;
+}
+
+.resicons{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  margin-left: 4%;
+  margin-top: 40%;
+
+
+}
+.mc1,.pj1,.kf1,.te1,.bk1,.sh1{
+  width: 180px;
+}
+.sr{
+  margin-top: 30%;
+  position: absolute;
+}
+.frt{
+  margin-top: 70%;
+  position: absolute
+  ;
+  width: 100%;
+}
+.cp1{
+  position: absolute;
+  margin-top: -18%;
+ margin-left: -160%;
+  width: 500px;
+  
+}

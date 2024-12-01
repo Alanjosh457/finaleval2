@@ -1,0 +1,78 @@
+.logs {
+    margin: 20px auto;
+    text-align: center;
+  margin-top: -140%;
+  margin-left: 50%;
+}
+
+.art1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 95vh;
+    width: 50%;
+    z-index: 1;
+}
+
+.final4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    top:110%
+}
+
+.intro {
+    margin: 20px auto;
+    text-align: center;
+    margin-left: 30%;
+}
+.namefield{
+    width: 400px;
+    height: 4vh;
+    border-radius: 25px;
+    margin-top: -10%;
+}
+.forms2{
+    margin-left: 77%;
+    margin-top: -19%;
+}
+.btn2{
+    margin-top: 40%;
+    background-color: #FC8A06;
+    color: white;
+    width: 400px;
+    border-radius: 25px;
+    margin-left: -198%;
+
+}
+.name1{
+  
+
+}
+.error{
+    color: red;
+    display: inline;
+}
+.namefield.hasError {
+    margin-bottom: 1px; /* Extra space when error is displayed */
+  }
+
+  .inputContainer{
+margin-left: -200%;
+  }
+  
+  .logs.errorActive img {
+    /* Styles for the image when .logs has the .errorActive class */
+    margin-top: 20%;
+  }
+
+
+  .final4.errorActive img{
+    margin-top: 10%;
+  }
+
+
+  .forms2.errorActive{
+    margin-top: -33%;
+  }

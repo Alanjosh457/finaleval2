@@ -1,0 +1,401 @@
+.adrs {
+  text-align: center;
+ 
+  position: absolute;
+  margin-top: -3%;
+ 
+}
+/* For the Edit button */
+.edt {
+  background-color: #ffffff; /* Green color */
+  color:#FC8A06; /* Text color */
+  border: none;
+  padding: 1px;
+  border-right: 1px solid #FC8A06; ;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
+  padding-right: 10px;
+}
+
+.edt:hover {
+
+}
+
+/* For the Remove button */
+.rmv {
+  background-color: #ffffff; /* Red color */
+  color: #FC8A06; /* Text color */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.rmv:hover {
+ 
+}
+
+.addressbox {
+  text-align: right;
+  margin-bottom: 20px;
+
+  
+}
+/* Ensure the .adress button stays at the left corner */
+.adress {
+  position: absolute;
+  top: 285px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+/* Container for address list and .adress */
+/* Ensure the .adress button stays at the left corner */
+.adress {
+  position: absolute;
+  top: 285px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  cursor: pointer;
+}
+
+/* Container for address list and .adress */
+.addressList {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  flex-wrap: wrap; /* Wrap to the next line if needed */
+  align-items: flex-start; /* Align items to the top */
+  gap: 10px; /* Space between cards */
+  margin-left: 60px; /* Reduced margin to bring cards closer to button */
+  margin-top: 20px; /* Top margin for spacing */
+  position: relative; /* Ensure the list is aligned correctly */
+  left: 280px;
+  
+}
+
+/* Styling for individual address cards */
+.addressCard {
+  background: white;
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 33%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 250px; /* Fixed width for cards */
+  flex: 0 0 auto; /* Prevent cards from resizing */
+  box-sizing: border-box; /* Ensure the padding doesn't affect width */
+}
+
+
+.username {
+  position: absolute;
+  margin-top: -1%;
+  font-weight: 700;
+  font-size: 1em;
+}
+.addressCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for the action buttons in the cards */
+.actionButtons button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actionButtons button:nth-child(1) {
+  background-color:white ;/* Green for Edit */
+  color: #FC8A06;
+}
+
+
+
+.actionButtons button:nth-child(2) {
+  background-color:white; /* Red for Remove */
+  color:#FC8A06;
+}
+
+
+/* General popup styling */
+.popup {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  z-index: 1000;
+  width: 50%;
+  height: 40vh;
+}
+
+/* Overlay for dull background effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Place it behind the popup but above other content */
+}
+
+.popupContent {
+  margin-top: -13%;
+  position: absolute;
+}
+
+.popupContent h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  margin-left: 20%;
+}
+
+/* Flex container for form fields on the same line */
+.popupContent .form-row {
+  position: absolute;
+  gap: 40px; /* Space between fields */
+  margin-bottom: 15px;
+}
+
+.popupContent select,
+.popupContent input {
+  flex: 2; /* All fields take equal width */
+  padding: 10px;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.popupContent textarea {
+  width: 380%; /* Full-width for textarea */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+  height: 100px;
+  margin-bottom: 15px;
+  margin-top: 20%;
+}
+
+.popupContent button {
+  background-color: #f90;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.popupContent button:hover {
+  background-color: #e87d00;
+}
+
+.popupContent button:nth-child(2) {
+  background-color: #ddd;
+  color: #333;
+}
+
+.popupContent button:nth-child(2):hover {
+  background-color: #ccc;
+}
+
+.city1 {
+  margin-left: 10%;
+  position: absolute;
+}
+
+.phn {
+  position: absolute;
+  margin-left: 230%;
+  margin-top: 1%;
+}
+
+.pinCode1 {
+  margin-left: 120%;
+  margin-top: 0.4%;
+  position: absolute;
+}
+
+.lc {
+  position: absolute;
+  margin-left: -2%;
+  padding: 10px;
+  margin-top: 48%;
+}
+
+.addressCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.addressCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.addressCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.actionButtons button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actionButtons button:nth-child(1) {
+  background-color: #4caf50; /* Green for Edit */
+  color: white;
+}
+
+.actionButtons button:nth-child(1):hover {
+  background-color: #45a049;
+}
+
+.actionButtons button:nth-child(2) {
+  background-color: #f44336; /* Red for Remove */
+  color: white;
+}
+
+.actionButtons button:nth-child(2):hover {
+  background-color: #e53935;
+}
+
+/* General popup styling */
+.popup {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  z-index: 1000;
+  width: 50%;
+  height: 40vh;
+}
+/* Overlay for dull background effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Place it behind the popup but above other content */
+}
+
+.popupContent {
+ margin-top: -13%;
+ position: absolute;
+
+}
+
+.popupContent h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  margin-left: 20%;
+}
+
+/* Flex container for form fields on the same line */
+.popupContent .form-row {
+position: absolute;
+  gap: 40px;/* Space between fields */
+  margin-bottom: 15px;
+}
+
+.popupContent select,
+.popupContent input {
+  flex: 2; /* All fields take equal width */
+  padding: 10px;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+  font-size: 14px;
+ 
+}
+
+.popupContent textarea {
+  width: 380%; /* Full-width for textarea */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+  height: 100px;
+  margin-bottom: 15px;
+  margin-top: 20%;
+}
+
+.popupContent button {
+  background-color: #f90;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.popupContent button:hover {
+  background-color: #e87d00;
+}
+
+.popupContent button:nth-child(2) {
+  background-color: #ddd;
+  color: #333;
+}
+
+.popupContent button:nth-child(2):hover {
+  background-color: #ccc;
+}
+.city1{
+  margin-left: 10%;
+  position: absolute;
+}
+.phn{
+ position: absolute;
+ margin-left: 230%;
+ margin-top: 1%;
+}
+.pinCode1{
+margin-left: 120%;
+margin-top: 0.4%;
+position: absolute;
+
+}
+.lc{
+  position: absolute;
+  margin-left: -2%;
+  
+  padding: 10px;
+  margin-top: 48%;
+}
+.adele2{
+  margin-top: 20%;
+}
+.ff{
+  position: absolute;
+  margin-top: 10%;
+  width: 100%;
+}
