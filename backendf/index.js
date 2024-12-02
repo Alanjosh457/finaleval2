@@ -6,8 +6,8 @@ const userRoutes = require("./routes/user");
 const cors = require("cors");
 app.use(cors(
     {
-    origin: "*",
-    
+     origin: 'https://finaleval2-frontend68.onrender.com',
+  credentials: true // This allows cookies and HTTP authentication to be sent along with the requests 
     }
 ));
 
@@ -19,7 +19,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Updated");
 });
 
 

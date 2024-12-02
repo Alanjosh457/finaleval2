@@ -59,6 +59,7 @@ const CheckoutPage = () => {
   
     if (cartId) {
       const sharedCart = localStorage.getItem(`cart_${cartId}`);
+        console.log("Cart ID:", cartId);
   
       if (sharedCart) {
         setCartItems(JSON.parse(sharedCart));
