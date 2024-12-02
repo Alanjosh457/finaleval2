@@ -10,6 +10,6 @@ createRoot(document.getElementById('root')).render(
 
     <HashRouter>
       <Header />
-    <HashRouter/>
+    </HashRouter>
 
 );
