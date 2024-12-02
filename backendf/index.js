@@ -6,7 +6,7 @@ const userRoutes = require("./routes/user");
 const cors = require("cors");
 app.use(cors(
     {
-     origin: 'https://finaleval2-frontend66.onrender.com',
+     origin: 'https://finaleval2-frontend68.onrender.com',
   credentials: true // This allows cookies and HTTP authentication to be sent along with the requests 
     }
 ));
