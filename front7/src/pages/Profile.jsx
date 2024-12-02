@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import styles from './Profile.module.css'; // Ensure your styles are correct
+import styles from './profile.module.css'; // Ensure your styles are correct
 import paym from '../images/payad.png'; // Import the image for the "Add Payment" button
 import fnl from '../images/final.png'
 
