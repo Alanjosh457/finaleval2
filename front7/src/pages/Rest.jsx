@@ -147,7 +147,25 @@ const Rest = () => {
     }
   }, [userId]);
 
-
+  useEffect(() => {
+    if (userId) {
+      // If a user is logged in, retrieve cart items specific to that user
+      const savedCart = localStorage.getItem(`cartItems_${userId}`);
+      if (savedCart) {
+        setCartItems(JSON.parse(savedCart));
+      } else {
+        setCartItems([]); // Ensure empty cart if no saved items
+      }
+    } else {
+      // If no user is logged in, use the general cart items (if any)
+      const savedCart = localStorage.getItem("cartItems");
+      if (savedCart) {
+        setCartItems(JSON.parse(savedCart));
+      } else {
+        setCartItems([]); // Ensure empty cart if no saved items
+      }
+    }
+  }, [userId]);
   
   
 
@@ -317,7 +335,7 @@ const Rest = () => {
    <div><img src={ice} alt="ice" className={styles.ice} /></div>
 </div>
 
-<div className={styles.share}><button className={styles.sbtn} onClick={handleShare}>
+<div className={`${styles.share} ${isCartVisible ? styles['cart-active'] : ''}`}><button className={styles.sbtn} onClick={handleShare}>
   <img src={shcrt} alt='shr' className={styles.shr}></img>
   </button></div>
 

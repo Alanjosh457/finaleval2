@@ -808,6 +808,7 @@ gap: 20px;
 background-color: #F9F9F9;
 
 
+
 }
 .bur3,.bur4{
     
@@ -890,6 +891,9 @@ background-color: #F9F9F9;
     margin-top: 15%;
     z-index: 14;
 
+}
+.bugs1{
+    color: blue;
 }
 .bdder4{
     margin-left: -725%;
@@ -1024,6 +1028,8 @@ background-color: #F9F9F9;
     position: absolute;
     margin-top: 15%;
     background-color: #ffffff;
+   
+    
 }
 .adder1:hover,
 .adder2:hover,
@@ -1287,4 +1293,10 @@ button{
   }
   .hidden{
     display: none;
+  }
+  .share{
+    display: none;
+  }
+  .share.cart-active{
+      display: block;
   }

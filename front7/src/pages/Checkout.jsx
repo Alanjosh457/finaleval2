@@ -28,6 +28,17 @@ const CheckoutPage = () => {
   const cps = 'http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733072079/l0vxih4qbimazhoymg3h.png';
 
   // Handle fetching cart items
+  const payment = () => {
+    const isLoggedIn = localStorage.getItem("token");
+    if (!isLoggedIn) {
+        navigate("/login");
+    } else {
+        console.log("Subtotal being passed:", subtotal); // Log for debugging
+        console.log("Cart Items being passed:", cartItems); // Log for debugging
+        navigate('/payment', { state: { cartItems, subtotal : subtotal} });
+    }
+};
+
   useEffect(() => {
     let cartData;
     let cartSubtotal = 0;
@@ -84,7 +95,23 @@ const CheckoutPage = () => {
     }
 }, []); // Runs on component mount
 
+useEffect(() => {
+  if (location.state?.cartItems) {
+    // Cart items passed via navigation state
 
+    
+    setCartItems(location.state.cartItems);
+    setSubtotal(location.state.subtotal || 0);
+  } else {
+    // Fallback: Get cart data from localStorage
+    const savedCart = localStorage.getItem("cartItems");
+    const savedSubtotal = localStorage.getItem("subtotal");
+    if (savedCart) {
+      setCartItems(JSON.parse(savedCart));
+      setSubtotal(savedSubtotal ? parseFloat(savedSubtotal) : 0);
+    }
+  }
+}, [location.state]);
   
   // Calculate total price and item count dynamically
   const totalAmount = cartItems.reduce(
@@ -99,14 +126,7 @@ const CheckoutPage = () => {
   };
 
   // Payment button click handler
-  const payment = () => {
-    const isLoggedIn = localStorage.getItem("token");
-    if (!isLoggedIn) {
-      navigate("/login");
-    } else {
-      navigate('/payment', { state: { cartItems, subtotal } });
-    }
-  };
+
 
   const yord = "http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732650313/edmgcbwaxxx0ks2bffdv.png";
   const de2 = "http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732730768/hssadolzpisq0lg0knw9.png";
