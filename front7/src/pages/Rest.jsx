@@ -188,28 +188,35 @@ const Rest = () => {
   const shcrt='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732958686/fwkhxmavayhh1i0dcnxf.png'
 
 
+  
   const handleShare = () => {
-    if (cartItems.length === 0) {
-      alert("Your cart is empty! Add items before sharing.");
-      return;
-  }
-
-  // Encode cart items in the URL
-  const encodedCart = encodeURIComponent(JSON.stringify(cartItems));
-  const checkoutUrl = `${window.location.origin}/#/checkout?cart=${encodedCart}`;
-
-  // Share logic
-  if (navigator.share) {
-      // Use Web Share API if supported
+    const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    const subtotal = totalAmount + 10;  // Adding tax or additional charges
+  
+    // Serialize the cartItems array into a JSON string, then encode it for safe use in the URL
+    const cartData = JSON.stringify(cartItems);
+    const encodedCartData = encodeURIComponent(cartData);
+  
+    // Create the checkout URL with the encoded cart data and subtotal
+    const checkoutUrl = `${window.location.origin}/#/checkout?cartData=${encodedCartData}&subtotal=${subtotal}`;
+  
+    // Store cart data in localStorage (for persistent storage across devices)
+    localStorage.setItem("cartData", cartData);
+  
+    // Optionally, store it in sessionStorage for the current session
+    sessionStorage.setItem("cartData", cartData);
+  
+    // Share URL using Web Share API or fallback method
+    if (navigator.share) {
       navigator
-          .share({
-              title: "Checkout - My Order",
-              url: checkoutUrl,
-          })
-          .then(() => console.log("Shared successfully!"))
-          .catch((error) => console.error("Error sharing:", error));
-  } else {
-      // Fallback modal for unsupported browsers
+        .share({
+          title: "Checkout - My Order",
+          url: checkoutUrl,
+        })
+        .then(() => console.log("Shared successfully!"))
+        .catch((error) => console.error("Error sharing", error));
+    } else {
+      // Fallback for unsupported browsers (like Firefox desktop)
       const fallbackModal = document.createElement("div");
       fallbackModal.style.position = "fixed";
       fallbackModal.style.top = "50%";
@@ -220,23 +227,30 @@ const Rest = () => {
       fallbackModal.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
       fallbackModal.style.zIndex = "1000";
       fallbackModal.innerHTML = `
-          <p>Copy the link below to share your cart:</p>
-          <input type="text" value="${checkoutUrl}" readonly style="width: 100%; margin-bottom: 10px; padding: 8px;" />
-          <button id="closeModal" style="margin-top: 10px; padding: 8px;">Close</button>
+        <p>Copy the link below to share:</p>
+        <input type="text" value="${checkoutUrl}" readonly style="width: 100%; margin-bottom: 10px;" />
+        <button id="closeModal" style="margin-top: 10px;">Close</button>
       `;
-
+  
       document.body.appendChild(fallbackModal);
-
-      // Add event listener for modal close
+  
       const closeModal = document.getElementById("closeModal");
       closeModal.addEventListener("click", () => {
-          document.body.removeChild(fallbackModal);
+        document.body.removeChild(fallbackModal);
       });
-  }
-    }
   
+      // Automatically select the text in the input field for easy copying
+      const inputField = fallbackModal.querySelector("input");
+      inputField.focus();
+      inputField.select();
+    }
+  };
+  
+  // Call this function when you want to trigger the sharing action
 
-
+  
+   
+  
 
   const [searchTerm, setSearchTerm] = useState("");
 
