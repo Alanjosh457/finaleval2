@@ -21,7 +21,9 @@ const Login = ({ setUserName }) => { // Added setUserName prop
     email: null,
     password: null,
   });
-
+const regi=()=>{
+  navigate('/register')
+}
   const art =
     "http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732387428/kxvg1bu3kuhzwje2ltch.png";
   const into =
@@ -208,7 +210,9 @@ const Login = ({ setUserName }) => { // Added setUserName prop
 
       <div className={`${styles.intro} ${hasErrors ? styles.errorActive : ""}`}>
         <img src={into} alt="intro" className={styles.intro1} />
-      </div>
+            </div>
+
+            <div><button onClick={regi}>Dont have an account? sign in</button></div>
 
       <div className={`${styles.final4} ${hasErrors ? styles.errorActive : ""}`}>
         <img src={final} alt="final" className={styles.final6} />
