@@ -189,22 +189,27 @@ const Rest = () => {
 
 
   const handleShare = () => {
-    const cartId = Math.random().toString(36).substring(2); // Generate a unique cart ID
-    localStorage.setItem(`cart_${cartId}`, JSON.stringify(cartItems)); // Store cart using the ID
-    
-    const checkoutUrl = `${window.location.origin}/#/checkout?cartId=${cartId}`;
-  
-    if (navigator.share) {
-      // Web Share API for supported browsers
+    if (cartItems.length === 0) {
+      alert("Your cart is empty! Add items before sharing.");
+      return;
+  }
+
+  // Encode cart items in the URL
+  const encodedCart = encodeURIComponent(JSON.stringify(cartItems));
+  const checkoutUrl = `${window.location.origin}/#/checkout?cart=${encodedCart}`;
+
+  // Share logic
+  if (navigator.share) {
+      // Use Web Share API if supported
       navigator
-        .share({
-          title: "Checkout - My Order",
-          url: checkoutUrl,
-        })
-        .then(() => console.log("Shared successfully!"))
-        .catch((error) => console.error("Error sharing", error));
-    } else {
-      // Fallback for unsupported browsers (like Firefox desktop)
+          .share({
+              title: "Checkout - My Order",
+              url: checkoutUrl,
+          })
+          .then(() => console.log("Shared successfully!"))
+          .catch((error) => console.error("Error sharing:", error));
+  } else {
+      // Fallback modal for unsupported browsers
       const fallbackModal = document.createElement("div");
       fallbackModal.style.position = "fixed";
       fallbackModal.style.top = "50%";
@@ -215,24 +220,24 @@ const Rest = () => {
       fallbackModal.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
       fallbackModal.style.zIndex = "1000";
       fallbackModal.innerHTML = `
-        <p>Copy the link below to share:</p>
-        <input type="text" value="${checkoutUrl}" readonly style="width: 100%; margin-bottom: 10px;" />
-        <button id="closeModal" style="margin-top: 10px;">Close</button>
+          <p>Copy the link below to share your cart:</p>
+          <input type="text" value="${checkoutUrl}" readonly style="width: 100%; margin-bottom: 10px; padding: 8px;" />
+          <button id="closeModal" style="margin-top: 10px; padding: 8px;">Close</button>
       `;
-    
+
       document.body.appendChild(fallbackModal);
-    
+
+      // Add event listener for modal close
       const closeModal = document.getElementById("closeModal");
       closeModal.addEventListener("click", () => {
-        document.body.removeChild(fallbackModal);
+          document.body.removeChild(fallbackModal);
       });
-    
-      // Automatically select the text in the input field for easy copying
-      const inputField = fallbackModal.querySelector("input");
-      inputField.focus();
-      inputField.select();
+  }
     }
-  };
+  
+
+
+
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (event) => {
