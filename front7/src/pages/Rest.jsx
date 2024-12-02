@@ -192,7 +192,7 @@ const Rest = () => {
     const cartId = Math.random().toString(36).substring(2); // Generate a unique cart ID
     localStorage.setItem(`cart_${cartId}`, JSON.stringify(cartItems)); // Store cart using the ID
     
-    const checkoutUrl = `${window.location.origin}/checkout?cartId=${cartId}`;
+    const checkoutUrl = `${window.location.origin}/#/checkout?cartId=${cartId}`;
   
     if (navigator.share) {
       // Web Share API for supported browsers

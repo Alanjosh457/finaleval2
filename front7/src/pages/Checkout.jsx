@@ -55,6 +55,7 @@ const CheckoutPage = () => {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const cartId = urlParams.get("cartId");
+    console.log("Cart ID:", cartId);
   
     if (cartId) {
       const sharedCart = localStorage.getItem(`cart_${cartId}`);
@@ -86,10 +87,10 @@ const CheckoutPage = () => {
     console.log('islogged?' ,isLoggedIn) // Check if user is logged in
     if (!isLoggedIn) {
       // Redirect to login page if not logged in
-      navigate("/login");
+      navigate("/#/login");
     } else {
       // Navigate to payment page if logged in
-      navigate('/payment' ,{ state:  { cartItems, subtotal: subtotal } });
+      navigate('/#/payment' ,{ state:  { cartItems, subtotal: subtotal } });
     }
   };
 
