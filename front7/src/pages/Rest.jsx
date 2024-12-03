@@ -53,6 +53,21 @@ const Rest = () => {
     dri4: { name: "Fruity shake", price: "Rs 90" },
   };
 
+  
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const updateWindowDimensions = () => {
+        setIsMobile(window.innerWidth <= 500);
+      };
+  
+      window.addEventListener('resize', updateWindowDimensions);
+      updateWindowDimensions(); // Initialize on first render
+  
+      return () => window.removeEventListener('resize', updateWindowDimensions);
+    }, []);
+  
+
   // Initialize Leaflet map
   useEffect(() => {
     mapRef.current = leaflet.map(mapContainerRef.current).setView([51.505, -0.09], 13);
@@ -102,6 +117,7 @@ const Rest = () => {
     });
   };
 
+
   
 
 
@@ -115,6 +131,12 @@ const Rest = () => {
     
     
   };
+
+  const closecart=()=>{
+ 
+      setIsCartVisible(false)
+  
+}
 
   // Hide cart
   const hideCart = () => {
@@ -225,8 +247,10 @@ const Rest = () => {
   const bk="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732169162/yaqkuqwnyqq58inqfgfd.png"
   const sh="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732169200/xgyshqqj4kou9uek0cdv.png"
   const shcrt='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732958686/fwkhxmavayhh1i0dcnxf.png'
-
-
+  const mbr1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733212042/ay108tilejibvt5wo9p4.png'
+  const mobfr='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733212527/wctelgqsbby0j6dxjrfs.png'
+  const mobcd='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733212981/y5mg9r3i4z5hkxczfghs.png'
+  const scrat='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733218769/nln8jvafzrigi2tfyseu.png'
   
   const handleShare = () => {
     const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -308,9 +332,12 @@ const Rest = () => {
       ? styles.highlight
       : "";
   };
+ 
+  const mc45='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733208538/nwql2hfobogc1atvkwsv.png'
 
   return (
     <>
+    <div className={styles.Mctainer}>
     <div><img src={mcdb} alt="mcdb" className={styles.mcdb} /></div>
     <div><p className={styles.mcp}>I'm lovin' it!</p></div>
     <div><p className={styles.mcd1}>McDonald’s East London</p></div>
@@ -319,9 +346,12 @@ const Rest = () => {
     <div className={styles.min}><img src={notes} alt="notes" className={styles.notes} /><p className={styles.mo}>Minimum Order: 12 GBP</p></div>
     <div className={styles.min2}><img src={bike} alt="bike" className={styles.notes} /><p  className={styles.mo}>Delivery in 20-25 Minutes</p></div>
     <div className={styles.opens}><img src={clock} alt="clock" className={styles.clock34} /><p className={styles.op}>Open until 3:00 AM</p></div>
+    
     <div><p className={styles.ao}>All Offers from McDonald’s East London</p></div>
-  
+    </div>
+    <img src={mc45} alt="McDonald's image" className={styles.mobileimage} />
     <div className={styles.searchContainer}>
+
   <img src={sm} alt="sm" className={styles.sm} />
   <input
     type="text"
@@ -350,6 +380,45 @@ const Rest = () => {
     <li  className={styles.cl3}>Orbit®</li>
   </ul>
 </div>
+
+<div className={styles.mbit}>
+<div><p className={styles.mobbur}>Burgers</p>
+<div className={styles.mbbr}>
+  <div><img src={mbr1}  onClick={() => handleImageClick("bur1", menuItems.bur1.name, menuItems.bur1.price,"burgers")} /></div>
+  <div><img src={mbr1}  onClick={() => handleImageClick("bur2", menuItems.bur2.name, menuItems.bur2.price,"burgers")} /></div>
+  <div><img src={mbr1} onClick={() => handleImageClick("bur3", menuItems.bur3.name, menuItems.bur3.price,"burgers")} /></div>
+  
+  </div>
+</div>
+
+</div>
+
+<div className={styles.mbit}>
+<div><p className={styles.mobbur}>Fries</p>
+<div className={styles.mbbr}>
+  <div><img src={mobfr}   onClick={() => handleImageClick("fri1", menuItems.fri1.name, menuItems.fri1.price,"fries")}/></div>
+  <div><img src={mobfr}  onClick={() => handleImageClick("fri2", menuItems.fri2.name, menuItems.fri2.price,"fries")}/></div>
+  <div><img src={mobfr}   onClick={() => handleImageClick("fri3", menuItems.fri3.name, menuItems.fri3.price,"fries")}/></div>
+  
+  </div>
+</div>
+
+</div>
+
+<div className={styles.mbit}>
+<div><p className={styles.mobbur}>Cold drinks</p>
+<div className={styles.mbbr}>
+  <div><img src={mobcd}  onClick={() => handleImageClick("dri1", menuItems.dri1.name, menuItems.dri1.price,"drinks")}/></div>
+  <div><img src={mobcd}  onClick={() => handleImageClick("dri2", menuItems.dri2.name, menuItems.dri2.price,"drinks")}/></div>
+  <div><img src={mobcd}  onClick={() => handleImageClick("dri3", menuItems.dri3.name, menuItems.dri3.price,"drinks")}/></div>
+  
+  </div>
+</div>
+
+</div>
+
+
+
 <div className={`${styles.promo} ${isCartVisible ? styles['cart-active'] : ''}`}>
 <div><img src={fod} alt="fod" className={styles.fod} /></div>
   <div><img src={vd} alt="vd" className={styles.vd} /></div>
@@ -362,7 +431,10 @@ const Rest = () => {
 
 
       <div className={`${styles['cart-box']} ${isCartVisible ? styles.active : ''}`}>
+        <div className={styles.closebtn} onClick={closecart}>X</div>
+      
       <img src={fulcart} alt="mbr" className={styles.carter} />
+
     <div className={styles.itemsc}>
       {cartItems.length > 0 ? (
           cartItems.map((item, index) => (
@@ -394,6 +466,7 @@ const Rest = () => {
                 </div>
 <div className={styles.lastbox}>
 <div className={styles.cartTotal}>
+                     <div className={styles.mbqry}>
                   <p className={styles.totalAmount}>Total to pay : </p><p className={styles.amount2}>₹{calculateTotal()}.00</p>
                  <div><img src={chose} alt="mcdb" className={styles.chose1} /></div>
                  <div><img src={cpn} alt="mcdb" className={styles.cpn2} /></div>
@@ -406,7 +479,7 @@ const Rest = () => {
                  <div><img src={line} alt="mcdb" className={styles.line2} /></div>
                  </div>
                  <div className={styles.check}><img src={checker} alt="checker" className={styles.ch} /><button  onClick={handleCheckout}  className={styles.check1}>Checkout!</button></div>
-                 
+                 </div>
 
 
                 </div>
@@ -415,8 +488,8 @@ const Rest = () => {
       </div>
       
    
-      
-       
+      <div className={styles.carl}>
+  
 <div className={styles.bugs2}>Burgers
 <div className={`${styles.adbtn} ${isCartVisible ? styles['cart-active'] : ''}`}>
     <div className={styles.a1}><img src={rec5} alt="notes" className={styles.adder1} onClick={() => handleImageClick("bur1", menuItems.bur1.name, menuItems.bur1.price,"burgers")} /></div>
@@ -482,7 +555,7 @@ const Rest = () => {
 <div><img src={dclass3} alt="bclass3" className={`${styles.dri4} ${getHiddenClass(menuItems.dri4.name)}`}/></div>
 <div className={styles.drinks1}>Cold Drinks</div>
 </div>
- 
+</div>
 <div className={`${styles.wb} ${isCartVisible ? styles['cart-active'] : ''}`}>
 
   <div className={styles.heds}>
@@ -582,6 +655,8 @@ const Rest = () => {
 </div>
       </div>
 
+      <div className={styles.rebox}>
+
       <div className={`${styles.re1}  ${isCartVisible ? styles['cart-active'] : ''}`}>
 
 
@@ -599,7 +674,9 @@ const Rest = () => {
           </div>
         </div>
        </div>
+       </div>
 <div><img src={trev} alt='selec' className={styles.tr}></img></div>
+
 
 <div className={styles.res1}><p>Similar Restaurants</p></div>
 

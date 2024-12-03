@@ -1045,10 +1045,15 @@ background-color: #F9F9F9;
     margin-left: 10%;
     z-index: 5;
     position: absolute;
-    margin-top: 15%;
+    margin-top: 20%;
     background-color: #ffffff;
+
    
     
+}
+
+.ch{
+ margin-top: 20%; 
 }
 .adder1:hover,
 .adder2:hover,
@@ -1234,6 +1239,10 @@ margin-left: -88%;
 margin-top: 50%;
 
 } 
+
+.scta{
+    display: block;
+}
 .scd2{
 position: absolute;
 margin-top: 80%;
@@ -1292,6 +1301,7 @@ width: 50px;
     position: absolute
     ;
 }
+
 .sbtn{
     margin-left: 73%;
     position: absolute;
@@ -1310,6 +1320,9 @@ button{
     margin-left: -5%;
    
   }
+  .carter{
+    
+  }
   .hidden{
     display: none;
   }
@@ -1319,5 +1332,163 @@ button{
   .share.cart-active{
       display: block;
   }
-  
-  
+  .closebtn{
+    display: none;
+  }
+
+  .mobileimage {
+    display: none;
+  }
+.mbit{
+    display: none;
+}
+.scta{
+   margin-left: 80%;
+   margin-top: 10%;
+   position: absolute;
+   z-index: 8;
+   
+}
+
+@media all and (max-width:480px){
+.Mctainer{
+display: none;}
+.mobileimage {
+    display: block;
+    width: 110%;
+   
+    margin-left: 1%;
+    margin-top: 48%;
+  }
+.searchContainer{
+    display: none;
+}
+  .cl{
+    width: 100%;
+    padding-right:50px ;
+  }
+  .cl2{
+    gap:120px;
+    margin-left: -20%;
+  }
+  .promo{
+    display: none;
+    
+  }
+  .carl{
+    display: none;
+  }
+  .mbit{
+    display: block;
+    margin-top: 30%;
+    margin-left: 10%;
+    
+  }
+  .mbbr{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 5%;
+  }
+  .mbur{
+    width: 20%;
+    display: block;
+  }
+  .mobbur{
+    font-weight: 700;
+  }
+  .share{
+    display: block;
+    
+  }
+  .carter{
+    margin-left: -30%;
+    width: 457px;
+    
+    
+  }
+  .itemsc{
+    margin-left: -30%;
+    margin-top: 10%;
+    height: 240vh;
+    padding-bottom:300px ;
+  }
+ .subTotal{
+
+ }
+ .lastbox{
+    height: 180vh;
+   
+ }
+ .cartTotal{
+    margin-top: 20%;
+ }
+.share{
+    display: none;
+}
+.share.cart-active{
+    display: block;
+    margin-top: -670%;
+    z-index: 20;
+    position: absolute;
+    background-color: #03081F;
+    margin-left: 10%;
+
+}
+.sbtn.cart-active{
+    fill: none;
+}
+.closebtn{
+    display: block;
+    background-color: #028643;
+    color:white;
+    position: absolute;
+   
+    z-index: 5;
+   
+    margin-left: 90%;
+    
+    height: 2vh;
+    font-size: 1.5em;
+    margin-top: -14%;
+   
+}
+
+.scta{
+  margin-top: -90%;
+  z-index: 28;
+}
+.wb{
+    display: block
+}
+.maps{
+display:block;
+margin-top: -360%;
+position: absolute;
+}
+.rebox{
+    display: none;
+}
+.res1{
+    display: none;
+}
+.resicons{
+    display: none;
+}
+.tr{
+    display: none;
+}
+.final2{
+    display: none;
+}
+.mbox{
+    margin-top: -160%;
+    margin-left: -1%;
+    width: 300px;
+
+}
+.we2{
+    margin-left: -5%;
+    font-size: 1.3em;
+}
+}

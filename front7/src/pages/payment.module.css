@@ -180,3 +180,18 @@ h2{
   transform: scale(0.9); /* Slightly enlarge the element */
  /* Add a shadow effect */
 }
+
+
+
+@media all and (max-width: 480px) {
+  .wall5{
+    margin-top: 500%;
+    position: absolute;
+  }
+ .co{
+  margin-left: -50%;
+  margin-top: 150%;
+  position: absolute;
+ }
+  }
+

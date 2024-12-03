@@ -480,6 +480,8 @@ body{
   margin-top: -35%;
   margin-left: 120%;
 }
+
+
 .lines3{
   margin-top: -35%;
   margin-left: 120%;
@@ -500,4 +502,79 @@ body{
   transform: scale(1.1); /* Slightly enlarge the image */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow effect */
   border: 2px solid #ff9900; /* Change border color on hover */
+}
+.b5{
+  margin-top: 10%;
+}
+.hm3{
+  display: none;
+}
+
+@media all and (max-width:480px){
+
+  .box1{
+    display: none;
+  }
+  .hm3{
+    display: block;
+    position: absolute;
+    margin-top: -110%;
+    width: 100%;
+  }
+  .hom{
+    display: block;
+    margin-top: -20%;
+    
+   
+  }
+  .box2{
+    margin-top: 240%;
+    position: absolute;
+    margin-left: -230%;
+  }
+  .box3{
+    margin-top: 280%;
+    margin-left: -230%;
+    margin-top: 300%;
+  }
+  .elem{
+   margin-left: -40%;
+   
+  }
+.pr{
+  margin-left: 30%;
+  margin-top: 250%;
+}
+.mc{
+  margin-left: 60%;
+}
+.pj{
+margin-top: 160%;
+}
+.kf3{
+  margin-top: 8%;
+  margin-left: 63%;
+}
+.tx4{
+  margin-left: 63%;
+  margin-top: 10%;
+}
+
+.bk5{
+margin-left: 63%;
+margin-top: 10%;
+}
+.botm{
+  display: none;
+}
+.te{
+
+}
+.sh6{
+  margin-left: -70%;
+  margin-top: 70%;
+}
+.b5{
+  display: none;
+}
 }

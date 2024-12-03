@@ -122,6 +122,22 @@ const toCart=()=>{
           )}
         </div>
       )}
+       {!isAuthPage && (
+         <div className={styles.Addressinfo2}>
+          <div className={styles.adrn}>
+ {userAddress.state && userAddress.city ? (
+                  <p>{userAddress.state}, {userAddress.city}</p>
+                ) : (
+                  <p>Regent Street, A4, A4201, London</p>
+                )}
+
+</div>
+         </div>
+
+)}
+
+
+
 
       <div className={styles.content}>
         <Routes>
@@ -137,6 +153,10 @@ const toCart=()=>{
         </Routes>
         <Toaster />
       </div>
+      
+<div className={styles.carts2}> <img src={cartbutton} alt="cart" className={styles.cartIcon2} onClick={toCart}/></div>
+
+
     </>
   );
 };

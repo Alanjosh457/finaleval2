@@ -34,6 +34,7 @@ const Home = () => {
   const b5="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732174658/lh1txtbiuyiuptwsh7pb.png"
   const part="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732175453/xcsfverrzegvskxqugny.png"
   const ride="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732175472/cxhb9uit6xlcrclaqrr9.png"
+  const homing='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733223541/acgqpsxu2twpfdqwydm6.png'
  
   const navigate=useNavigate() 
   const rester=()=>{
@@ -41,6 +42,7 @@ const Home = () => {
   }
   return (
 <>
+<div className={styles.hom}><img src={homing} className={styles.hm3}/></div>
 
 <div className={styles.box1}>
 <div className={styles.ps}>
@@ -79,7 +81,6 @@ const Home = () => {
  <img src={orange} alt="orange" className={styles.orange} />
  </div>
 
-
  
 </div>
 </div>
@@ -87,14 +88,15 @@ const Home = () => {
 </div>
 <div className={styles.b3}> <img src={box3} alt="box3" className={styles.box3} />
 </div>
-<div className={styles.pr}>Popular Restaurants
-</div>
+<div className={styles.pr}>Popular Restaurants</div>
+
 
 
   
   <div className={styles.elem} >
  
   <div className={styles.mc1}>
+
   <div><img src={mc} alt="mc" className={styles.mc} onClick={rester} /></div>
   </div>
    
@@ -134,7 +136,7 @@ const Home = () => {
  </div>
 
 
- 
+ < div className={styles.botm}>
  <div className={styles.nb1}>
  <p className={styles.know}>Know more about us!</p>
 
@@ -185,7 +187,7 @@ const Home = () => {
  </div>
 
  <div><img src={final} alt="final" className={styles.final} /></div>
-    
+ </div>
 </>
    
   )

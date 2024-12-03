@@ -148,6 +148,9 @@ const Register = ({ setUserName }) => {
       setLoading(false);
     }
   };
+  const logger=()=>{
+     navigate('./login')
+  }
 
 
   const art =
@@ -236,6 +239,7 @@ const Register = ({ setUserName }) => {
       <div className={`${styles.final4} ${Object.values(formErrors).some((error) => error) ? styles.errorActive : ""}`}>
         <img src={final} alt="intro" className={styles.final6} />
       </div>
+      < div className={styles.act}>Already have an account?<button className={styles.signup8} onClick={logger}>Sign in</button></div>
     </>
   );
 };

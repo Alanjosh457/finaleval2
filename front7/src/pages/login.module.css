@@ -96,3 +96,39 @@ margin-left: -200%;
     position: absolute;
     margin-left: 14%;
   }
+  @media all and (max-width:480px){
+    .art1{
+      display: none;
+    }
+    .intro {
+      margin-top: 1%;
+      margin-left: 5%;
+  }
+  .logs {
+   display: block;
+   margin-top: -109%;
+   margin-left: -20%;
+ 
+}
+.inputContainer{
+  margin-left: -300%;
+  margin-top: 40%;
+ 
+}
+.act{
+  margin-top: 38%;
+  position: absolute;
+  margin-left: 14%;
+}
+.signup8 {
+
+}
+.final6{
+  
+}
+.btn2{
+margin-top: 67%;
+margin-left: -300%;
+}
+
+  }

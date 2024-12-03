@@ -90,3 +90,102 @@
     position: absolute;
     margin-left: 73%;
   }
+
+  @media all and (max-width: 480px) {
+    
+    .kkk {
+      height: auto; /* Remove full-screen height */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    /* Styling for the success image */
+    .scs {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px; /* Add space from top */
+      margin-top: -190%;
+    }
+  
+    .scs1 {
+      width: 200px; /* Resize the success image */
+      height: auto;
+      margin-top: 0;
+      margin-left: 0;
+      position: relative;
+      margin-top: -190%;
+    }
+  
+    /* The container for cart items */
+    .bor {
+      margin-top: 20px;
+      margin-left: 0;
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Styling for the cart items list */
+    .carti {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  
+    .lct {
+      display: flex;
+      justify-content: center; /* Center cart items */
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      width: 100%;
+    }
+  
+    .itn {
+      font-size: 16px; /* Slightly smaller font size */
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .b8 {
+      width: 40px; /* Adjust the width for the button */
+      height: auto;
+      margin-top: 10px;
+    }
+  
+    .fl3 {
+      width: 100%;
+      position: relative;
+      margin-top: 10%; /* Adjust the position of the final image */
+    }
+  
+    /* Adjust for the image at the top (b7 button) */
+    .tck {
+      z-index: 5;
+    }
+  
+    /* Adjustments to the final image */
+    .frd {
+      width: 100%; /* Adjust width to full screen */
+      margin-top: 20px; /* Add margin from top */
+      position: relative;
+    }
+  
+    /* Specific styling for the success page image on mobile */
+    .scs1 {
+      width: 150px; /* Resize the image for mobile */
+      margin-left: 50%;
+      transform: translateX(-50%); /* Center the image */
+      margin-top: 10px;
+    }
+  
+
+  }

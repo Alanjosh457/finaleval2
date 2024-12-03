@@ -163,7 +163,7 @@ useEffect(() => {
           />
         </div>
       </div>
-
+<div className={styles.cab}>
       <div className={styles.delebtn} onClick={deliver}>
         <img src={de2} alt="Deliver" className={styles.de2} />
       </div>
@@ -203,6 +203,7 @@ useEffect(() => {
       </div>
       <div className={styles.fns}>
         <img src={fn1} className={styles.frt} />
+      </div>
       </div>
     </>
   );

@@ -344,3 +344,48 @@
 .sr{
   margin-left: 5%;
 }
+
+@media all and (max-width: 480px) {
+  .checkbox{
+    width: 60%;
+  }
+  .chec{
+    width: 30%;
+  }
+ .sr{
+  margin-top: 190%;
+  position: absolute;
+ }
+ .resicons{
+  margin-top: 220%;
+  position: absolute;
+ }
+ .de2{
+  margin-top: 200%;
+  position: absolute;
+ }
+ .delebtn{
+  margin-top: 100%;
+  position: absolute;
+  margin-left: 5%;
+ }
+ .sales{
+  margin-top: 120%;
+  position: absolute;
+  margin-left: 10%;
+ }
+
+ .fns{
+  margin-top: 50%;
+  position: absolute;
+ }
+
+ .pay{
+  margin-top: 170%;
+  position: absolute;
+  margin-left: 27%;
+  width: 100px;
+
+ }
+
+}

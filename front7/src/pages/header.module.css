@@ -219,9 +219,13 @@ ul {
   position: absolute;
   margin-left: 20%;
   text-align: center;
-
+  
  
 }
+.Addressinfo2{
+  display: none;
+}
+
 .ltion{
   color: #FC8A06;
 }
@@ -248,6 +252,14 @@ ul {
  
   
 }
+.carts2{
+  
+ display: none;
+}
+.cartIcon2{
+ display: none;
+
+}
 .cartIcon {
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -257,4 +269,59 @@ ul {
 .cartIcon:hover {
   transform: scale(0.8); /* Slightly enlarge the icon */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+@media all and (max-width:480px){
+.signup2{
+  position: absolute;
+  margin-top: 10%;
+  
+}
+.signup{
+position: absolute;
+margin-top: 10%;
+
+
+}
+.logo{
+  margin-top: -5%;
+  margin-left: -2%;
+
+}
+.navbar{
+  display: none;
+}
+.adrn{
+ position: absolute;
+ margin-top: 1%
+}
+.Addressinfo2{
+  position: absolute;
+ margin-top: 10%;
+margin-left: 10%;
+ 
+}
+.cartIcon{
+  position: absolute;
+  margin-left: -30%;
+  
+}
+.carts2{
+  position: absolute;
+  margin-top: -570%;
+  z-index: 9000000;
+  margin-left: 50%;
+  display: block;
+  
+}
+.cartIcon2{
+  position: absolute;
+  margin-top: -350%;
+  display: block;
+
+}
+.login5{
+  margin-left: -160%;
+}
+
 }

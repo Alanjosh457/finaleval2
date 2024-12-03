@@ -81,7 +81,11 @@ const regi=()=>{
       const response = await login(formData);
 
       if (response.token) {
-        toast.success(response.message);
+        toast.success(response.message) 
+      
+      
+
+        
 
         const currentUserId = localStorage.getItem("userId");
 
@@ -111,6 +115,8 @@ const regi=()=>{
     
         console.log(response);
 
+    
+
 
         // Store username and token in localStorage
         localStorage.setItem("token", response.token);
@@ -126,6 +132,7 @@ const regi=()=>{
         console.log(response.email)  // Save username
         setUserName(response.name); // Update username in Header
 
+      
         const userCartKey = `cartItems_${response.id}`;
         const existingCart = localStorage.getItem(userCartKey);
         if (!existingCart) {
@@ -148,10 +155,15 @@ const regi=()=>{
         // Navigate to the home page after successful login
         navigate("/");
       }
-    } catch (error) {
+    } 
+    
+   
+    catch (error) {
       console.error(error);
       toast.error("Login failed.");
-    } finally {
+    } 
+    
+    finally {
       setLoading(false);
     }
   };
@@ -163,7 +175,7 @@ const regi=()=>{
       <div className={styles.arts}>
         <img src={art} alt="art" className={styles.art1} />
       </div>
-
+<div className={styles.login5}>
       <div className={`${styles.forms2} ${hasErrors ? styles.errorActive : ""}`}>
         {/* Email Field */}
         <div className={styles.inputContainer}>
@@ -216,6 +228,7 @@ const regi=()=>{
 
       <div className={`${styles.final4} ${hasErrors ? styles.errorActive : ""}`}>
         <img src={final} alt="final" className={styles.final6} />
+      </div>
       </div>
     </>
   );

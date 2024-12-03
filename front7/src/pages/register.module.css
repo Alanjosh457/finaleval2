@@ -16,10 +16,11 @@
 
 .final4 {
     position: absolute;
-    bottom: 0;
+    bottom: 5;
     left: 0;
     z-index: 1;
-    top:110%
+    top:110%;
+    width: 100%;
 }
 
 .intro {
@@ -75,4 +76,59 @@ margin-left: -200%;
 
   .forms2.errorActive{
     margin-top: -33%;
+  }
+  .signup8 {
+    color: orange; /* Set the text color to orange */
+    text-decoration: underline; /* Underline the text */
+    background: none; /* Remove any default button background */
+    border: none; /* Remove any default button border */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    font-size: inherit; /* Ensure it inherits font size from its parent */
+    padding: 0; /* Remove padding to make it inline */
+  }
+  .act{
+    margin-top: 33%;
+    position: absolute;
+    margin-left: 14%;
+  }
+  .final6{
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  @media all and (max-width:480px){
+    .art1{
+      display: none;
+    }
+    .intro {
+      margin-top: 1%;
+      margin-left: 5%;
+  }
+  .logs {
+   display: block;
+   margin-top: -160%;
+   margin-left: -20%;
+ 
+}
+.inputContainer{
+  margin-left: -300%;
+  margin-top: 40%;
+ 
+}
+.act{
+  margin-top: 90%;
+  position: absolute;
+  margin-left: 14%;
+}
+.signup8 {
+
+}
+.final6{
+  margin-top: 50%;
+}
+.btn2{
+margin-top: 67%;
+margin-left: -300%;
+}
+
   }

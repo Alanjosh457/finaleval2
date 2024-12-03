@@ -67,7 +67,7 @@ const payer=()=>{
 
   return (
     <div className={styles.paymentContainer}>
-      <div>
+      <div className={styles.wall5}>
         <img src={wallet} className={styles.dcs} alt="Wallet Icon" />
       </div>
       <div>
