@@ -49,6 +49,10 @@ const Header = () => {
     setUserAddress(newAddress);
   };
 
+const toCart=()=>{
+  navigate('/restaurants',{ state: { toggleCart: true } })
+}
+
   const handleLogout = () => {
     // Add logout logic here (e.g., clearing localStorage, redirecting to login page)
     localStorage.removeItem('username');
@@ -64,7 +68,7 @@ const Header = () => {
         <div className={styles.headerdiv}>
           <div className={styles.headcon}>
             <div className={styles.offer}>
-              <img src={cartbutton} alt="cart" className={styles.cartIcon} />
+              <img src={cartbutton} alt="cart" className={styles.cartIcon} onClick={toCart}/>
               <img src={star} alt="Star Icon" className={styles.icon} />
               <div className={styles.getord}> Get 5% Off your first order,</div>
             </div>
@@ -80,7 +84,7 @@ const Header = () => {
                 )}
               </div>
               <div className={styles.promo2}>
-                <Link to="/address">Change Location</Link>
+                <Link to="/address" className={styles.ltion}>Change Location</Link>
               </div>
             </div>
           </div>

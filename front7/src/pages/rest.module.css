@@ -842,7 +842,9 @@ background-color: #F9F9F9;
     margin-left: 10%;
    
 }
-
+.bugs1.cart-active{
+    display: block;
+}
 .adbtn.cart-active .adder1 {
    
     margin-left: 230%;
@@ -893,7 +895,7 @@ background-color: #F9F9F9;
 
 }
 .bugs1{
-    color: blue;
+  display: none;
 }
 .bdder4{
     margin-left: -725%;
@@ -933,6 +935,13 @@ background-color: #F9F9F9;
    z-index: 18;
   
   
+  }
+  .fries1.cart-active{
+    display: block;
+  }
+  .fries1{
+    display: none;
+
   }
   
 .fdbtn.cart-active .bdder4 {
@@ -980,15 +989,25 @@ background-color: #F9F9F9;
     z-index: 24;
     
 }
-
+.clock34{
+    margin-top: 5%;
+    margin-left: 10%;
+}
 .cdbtn.cart-active{
     margin-top: 46%;
     margin-left: 51%;
+   
+    
 
  
    
 }
 
+.cl2{
+    gap: 180px;
+    margin-top: -1%;
+  
+}    
 .cdbtn.cart-active .cdder1 {
    
     margin-left: 238%;
@@ -1300,3 +1319,5 @@ button{
   .share.cart-active{
       display: block;
   }
+  
+  

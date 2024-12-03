@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./register.module.css";
+import styles from "./login.module.css";
 import { login } from "./index";
 import toast from "react-hot-toast";
 import logo from "../images/logo.png";
@@ -212,7 +212,7 @@ const regi=()=>{
         <img src={into} alt="intro" className={styles.intro1} />
             </div>
 
-            <div><button onClick={regi}>Dont have an account? sign in</button></div>
+            < div className={styles.act}>Dont have an account?<button className={styles.signup8} onClick={regi}>Sign up</button></div>
 
       <div className={`${styles.final4} ${hasErrors ? styles.errorActive : ""}`}>
         <img src={final} alt="final" className={styles.final6} />

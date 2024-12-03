@@ -215,10 +215,15 @@ ul {
   margin-top: 10%;
 }
 .tx2{
-  margin-top: -17%;
+  margin-top: -16%;
   position: absolute;
   margin-left: 20%;
+  text-align: center;
+
  
+}
+.ltion{
+  color: #FC8A06;
 }
 .signup2{
   background-color: black;
@@ -235,10 +240,21 @@ ul {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth hover effect */
+
 }
 .profile2{
   z-index: 30000;
   margin-left: -90%;
  
   
+}
+.cartIcon {
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cartIcon:hover {
+  transform: scale(0.8); /* Slightly enlarge the icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
 }

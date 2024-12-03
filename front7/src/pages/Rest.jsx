@@ -20,7 +20,7 @@ import store from '../images/store.png'
 import line from '../images/line9.png'
 import checker from '../images/checker.png'
 import fulcart from '../images/fulcart.png'
-import { useNavigate} from 'react-router-dom';
+import { useNavigate,useLocation} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
@@ -35,21 +35,22 @@ const Rest = () => {
   const userId = localStorage.getItem("userId");
 
   const navigate = useNavigate();
+  const location = useLocation();
   
 
   const menuItems = {
-    bur1: { name: "Royal pack", price: "Rs 120" },
-    bur2: { name: "Chicken", price: "Rs 150" },
-    bur3: { name: "Veggie", price: "Rs 100" },
-    bur4: { name: "DoubleBurger", price: "Rs 180" },
-    fri1: { name: "Large French Fries", price: "Rs 60" },
-    fri2: { name: "Cheese Fries", price: "Rs 80" },
-    fri3: { name: "Spicy Curly Fries", price: "Rs 70" },
-    fri4: { name: "Garlic Parmesan Fries", price: "Rs 90" },
-    dri1: { name: "Coca Cola (500ml)", price: "Rs 50" },
-    dri2: { name: "Lemonade", price: "Rs 40" },
-    dri3: { name: "Iced Tea", price: "Rs 60" },
-    dri4: { name: "Mango Smoothie", price: "Rs 90" },
+    bur1: { name: "Cheese Burst", price: "Rs 120" },
+    bur2: { name: "Classic Fried", price: "Rs 150" },
+    bur3: { name: "Double Patty", price: "Rs 100" },
+    bur4: { name: "Coke delight", price: "Rs 180" },
+    fri1: { name: "Dual bucket", price: "Rs 60" },
+    fri2: { name: "French Pack", price: "Rs 80" },
+    fri3: { name: "Potato Combo", price: "Rs 70" },
+    fri4: { name: "Fried Pops", price: "Rs 90" },
+    dri1: { name: "Strawerry blast", price: "Rs 50" },
+    dri2: { name: "Vanilla shake", price: "Rs 40" },
+    dri3: { name: "Tropical Punch", price: "Rs 60" },
+    dri4: { name: "Fruity shake", price: "Rs 90" },
   };
 
   // Initialize Leaflet map
@@ -70,16 +71,20 @@ const Rest = () => {
 
   // Retrieve saved cart items from local storage on component mount
   useEffect(() => {
-    const savedCart = localStorage.getItem("cartItems");
+    const userCartKey = userId ? `cartItems_${userId}` : "cartItems";
+    const savedCart = localStorage.getItem(userCartKey);
     if (savedCart) {
       setCartItems(JSON.parse(savedCart));
+    } else {
+      setCartItems([]); // Ensure empty cart if no saved items
     }
-  }, []);
+  }, [userId]);
 
-  // Save cart items to local storage whenever cartItems changes
+  // Save cart items to localStorage on update
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
+    const userCartKey = userId ? `cartItems_${userId}` : "cartItems";
+    localStorage.setItem(userCartKey, JSON.stringify(cartItems));
+  }, [cartItems, userId]);
 
   // Add item to cart
   const addToCart = (id, name, price, classtype) => {
@@ -97,12 +102,18 @@ const Rest = () => {
     });
   };
 
-  // Handle item click
+  
+
+
+
   const handleImageClick = (id, name, price, classtype) => {
     if (!isCartVisible) {
-      setIsCartVisible(true); // Show the cart on the first click
+      setIsCartVisible(true); 
     }
-    addToCart(id, name, price, classtype); // Add item to the cart
+    addToCart(id, name, price, classtype);
+   alert(`${name} added to cart`)
+    
+    
   };
 
   // Hide cart
@@ -137,6 +148,12 @@ const Rest = () => {
 
   useEffect(() => {
     if (userId) {
+      localStorage.setItem(`cartItems_${userId}`, JSON.stringify(cartItems));
+    }
+  }, [cartItems, userId]);
+
+  useEffect(() => {
+    if (userId) {
       const userCartKey = `cartItems_${userId}`;
       const savedCart = localStorage.getItem(userCartKey);
       if (savedCart) {
@@ -167,10 +184,14 @@ const Rest = () => {
     }
   }, [userId]);
   
-  
+  useEffect(() => {
+    if (location.state?.toggleCart) {
+      setIsCartVisible(true); // Automatically toggle cart if the state says so
+    }
+  }, [location.state]);
 
   const toggleCart=()=>{
-
+    setIsCartVisible(!isCartVisible);
   }
 
   const mcdb='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732215057/p0mot6xlf3kqbsyv7uds.png'
@@ -184,18 +205,18 @@ const Rest = () => {
   const fod='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732269986/vh6gu8orq4lqn5gjepyp.png'
   const vd='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732270056/n6mk2bowij9cocvurytz.png'
   const ice='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732270086/ev6bypck3ouccszmuliy.png'
-  const bg1="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732973902/qdo5vdfqhiuh4bt6tw4t.png"
-  const bclass1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732274841/j2jwagfqpgrodnyaztgb.png'
-  const bclass2='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732274904/ckqug27w6saznikt2u3t.png'
-  const bclass3='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732274927/hmzy80qxr3ixavevjvze.png'
-  const fg='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732274968/okai2l6xk3c1qy85uxza.png'
-  const fclass1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275034/qpdbgtsg3pfy4ymrk1nm.png'
-  const fclass2='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275060/twd7zejo3tkxonvfetb0.png'
-  const fclass3='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275083/b0vebambtjwyns2nbodk.png'
-  const dg1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275229/tptxqyeibkrz6g1xp5ps.png'
-  const dclass1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275267/j89spg12qv6yvwgdjnth.png'
-  const dclass2="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275392/t88fp7odcmlawagywfee.png"
-  const dclass3="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732275414/q5u1yqnh5mznpqnytve8.png"
+  const bg1="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733162030/ckwwo8iibl20zd8g95rf.png"
+  const bclass1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733160768/jkvsjdbuvqefjp0gxl8f.png'
+  const bclass2='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733161001/ntoers7boierv482be3u.png'
+  const bclass3='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733161130/iucrc6txc3rzhf0zymit.png'
+  const fg='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733162292/beqhkouv5of12sofyuco.png'
+  const fclass1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733162425/danbplhel75s0ddqlbx4.png'
+  const fclass2='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733163602/dqohgs0wocibfsnmhrwp.png'
+  const fclass3='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733164339/i5cbc1pymoofwxi6qkxm.png'
+  const dg1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733164556/qcpbidot2qhvkeudb6ay.png'
+  const dclass1='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733164778/znkprlbxbd2bn2n6e0id.png'
+  const dclass2="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733165783/z8hwihn9cqnqfbncwn08.png"
+  const dclass3="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1733166005/sxjat5ral7a4iwssmhfn.png"
   const rev='http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732361304/th7w7u7cdl2nzeypj52c.png'
   const mc="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732168937/f8wzlrbubhdaftfzv6wl.png"
   const pj="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732169051/bpbwgyfpqtlj81bgzrfz.png"
@@ -297,7 +318,7 @@ const Rest = () => {
     <div><img src={rate} alt="rate" className={styles.rate} /></div>
     <div className={styles.min}><img src={notes} alt="notes" className={styles.notes} /><p className={styles.mo}>Minimum Order: 12 GBP</p></div>
     <div className={styles.min2}><img src={bike} alt="bike" className={styles.notes} /><p  className={styles.mo}>Delivery in 20-25 Minutes</p></div>
-    <div className={styles.opens}><img src={clock} alt="clock" className={styles.clock} /><p className={styles.op}>Open until 3:00 AM</p></div>
+    <div className={styles.opens}><img src={clock} alt="clock" className={styles.clock34} /><p className={styles.op}>Open until 3:00 AM</p></div>
     <div><p className={styles.ao}>All Offers from McDonald’s East London</p></div>
   
     <div className={styles.searchContainer}>
@@ -393,7 +414,7 @@ const Rest = () => {
       </div>
       </div>
       
-      
+   
       
        
 <div className={styles.bugs2}>Burgers
@@ -421,7 +442,7 @@ const Rest = () => {
 <div ><img src={bclass1} alt="bclass1" onClick={() => handleImageClick("bur2", menuItems.bur2.name, menuItems.bur2.price,"burgers")} className={`${styles.bur2} ${getHiddenClass(menuItems.bur2.name)}`}  /></div>
 <div  > <img src={bclass2}   onClick={() => handleImageClick("bur3", menuItems.bur3.name, menuItems.bur3.price,"burgers")} alt="bclass2" className={`${styles.bur3} ${getHiddenClass(menuItems.bur3.name)}`}  /></div>
 <div ><img src={bclass3}   onClick={() => handleImageClick("bur4", menuItems.bur4.name, menuItems.bur4.price,"burgers")} alt="bclass3" className={`${styles.bur4} ${getHiddenClass(menuItems.bur4.name)}`}  /></div>
-<div className={styles.bugs1}>Burgers</div>
+<div className={`${styles.bugs1} ${isCartVisible ? styles['cart-active'] : ''}`}>Burgers</div>
 </div>
 
 
@@ -430,12 +451,12 @@ const Rest = () => {
 >
 <div className={styles.fries2}><p className={styles.fr2}>Fries</p></div>
 
-  <div><img src={fg} alt="bg1" className={styles.fri1}    /></div>
+  <div><img src={fg} alt="bg1" className={`${styles.fri1} ${getHiddenClass(menuItems.fri1.name)}`}    /></div>
 
-<div><img src={fclass1} alt="bclass1" className={styles.fri2} /></div>
-<div><img src={fclass2} alt="bclass2" className={styles.fri3} /></div>
-<div ><img src={fclass3} alt="bclass3" className={styles.fri4} /></div>
-<div className={styles.fries1}>Fries</div>
+<div><img src={fclass1} alt="bclass1" className={`${styles.fri2} ${getHiddenClass(menuItems.fri2.name)}`} /></div>
+<div><img src={fclass2} alt="bclass2" className={`${styles.fri3} ${getHiddenClass(menuItems.fri3.name)}`} /></div>
+<div ><img src={fclass3} alt="bclass3" className={`${styles.fri4} ${getHiddenClass(menuItems.fri4.name)}`} /></div>
+<div className={`${styles.fries1} ${isCartVisible ? styles['cart-active'] : ''}`}>Fries</div>
 <div className={`${styles.fdbtn} ${isCartVisible ? styles['cart-active'] : ''}`}>
     <div className={styles.b1}><img src={rec5} alt="notes" className={styles.bdder1}  onClick={() => handleImageClick("fri1", menuItems.fri1.name, menuItems.fri1.price,"fries")}/></div>
      <div className={styles.b2}><img src={rec5} alt="notes" className={styles.bdder2}  onClick={() => handleImageClick("fri2", menuItems.fri2.name, menuItems.fri2.price,"fries")}/></div>
@@ -443,7 +464,6 @@ const Rest = () => {
       <div className={styles.b4}> <img src={rec5} alt="notes" className={styles.bdder4}  onClick={() => handleImageClick("fri4", menuItems.fri4.name, menuItems.fri4.price,"fries")}/></div>
       </div>
 </div>
-
 
 <div
   className={`${styles.drinks} ${isCartVisible ? styles['cart-active'] : ''}`}
@@ -455,14 +475,14 @@ const Rest = () => {
      <div className={styles.b3}><img src={rec5} alt="notes" className={styles.cdder3}  onClick={() => handleImageClick("dri3", menuItems.dri3.name, menuItems.dri3.price,"drinks")}/></div>  
       <div className={styles.b4}> <img src={rec5} alt="notes" className={styles.cdder4}  onClick={() => handleImageClick("dri4", menuItems.dri4.name, menuItems.dri4.price,"drinks")}/></div>
       </div>
-  <div ><img src={dg1} alt="bg1" className={styles.dri1}  /></div>
+  <div ><img src={dg1} alt="bg1" className={`${styles.dri1} ${getHiddenClass(menuItems.dri1.name)}`}  /></div>
 
-<div ><img src={dclass1} alt="bclass1" className={styles.dri2}  /></div>
-<div ><img src={dclass2} alt="bclass2" className={styles.dri3}  /></div>
-<div><img src={dclass3} alt="bclass3" className={styles.dri4}/></div>
+<div ><img src={dclass1} alt="bclass1" className={`${styles.dri2} ${getHiddenClass(menuItems.dri2.name)}`}  /></div>
+<div ><img src={dclass2} alt="bclass2" className={`${styles.dri3} ${getHiddenClass(menuItems.dri3.name)}`}  /></div>
+<div><img src={dclass3} alt="bclass3" className={`${styles.dri4} ${getHiddenClass(menuItems.dri4.name)}`}/></div>
 <div className={styles.drinks1}>Cold Drinks</div>
 </div>
-
+ 
 <div className={`${styles.wb} ${isCartVisible ? styles['cart-active'] : ''}`}>
 
   <div className={styles.heds}>

@@ -1,8 +1,9 @@
 .logs {
     margin: 20px auto;
     text-align: center;
-  margin-top: -140%;
+  margin-top: -110%;
   margin-left: 50%;
+ 
 }
 
 .art1 {
@@ -19,7 +20,9 @@
     bottom: 0;
     left: 0;
     z-index: 1;
-    top:110%
+    top:110%;
+    width: 100%;
+    
 }
 
 .intro {
@@ -75,4 +78,21 @@ margin-left: -200%;
 
   .forms2.errorActive{
     margin-top: -33%;
+  }
+  .signup8 {
+    color: orange; /* Set the text color to orange */
+    text-decoration: underline; /* Underline the text */
+    background: none; /* Remove any default button background */
+    border: none; /* Remove any default button border */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    font-size: inherit; /* Ensure it inherits font size from its parent */
+    padding: 0; /* Remove padding to make it inline */
+  }
+  .final6{
+    width: 100%;
+  }
+  .act{
+    margin-top: 22%;
+    position: absolute;
+    margin-left: 14%;
   }
