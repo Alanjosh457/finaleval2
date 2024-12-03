@@ -13,7 +13,7 @@ import seven from '../images/seven.png';
 import eight from '../images/eight.png';
 import oline from '../images/oline.png';
 import final from '../images/final.png'
-
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const pizzaimg='https://res.cloudinary.com/dgkcgjcw5/image/upload/v1732124874/jcpughvsh7vrgzytjuwy.png'
@@ -35,7 +35,10 @@ const Home = () => {
   const part="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732175453/xcsfverrzegvskxqugny.png"
   const ride="http://res.cloudinary.com/dgkcgjcw5/image/upload/v1732175472/cxhb9uit6xlcrclaqrr9.png"
  
-  
+  const navigate=useNavigate() 
+  const rester=()=>{
+    navigate('/restaurants')
+  }
   return (
 <>
 
@@ -89,30 +92,30 @@ const Home = () => {
 
 
   
-  <div className={styles.elem}>
+  <div className={styles.elem} >
  
   <div className={styles.mc1}>
-  <div><img src={mc} alt="mc" className={styles.mc} /></div>
+  <div><img src={mc} alt="mc" className={styles.mc} onClick={rester} /></div>
   </div>
    
    <div className={styles.pj2}> 
-    <div><img src={pj} alt="pj" className={styles.pj} /></div>
+    <div><img src={pj} alt="pj" className={styles.pj} onClick={rester}/></div>
     </div>
 
    <div className={styles.kf3}> 
-    <div><img src={kf} alt="kf" className={styles.kf} /></div>
+    <div><img src={kf} alt="kf" className={styles.kf} onClick={rester}/></div>
    </div>
    
    <div className={styles.tx4}>
-   <div><img src={te} alt="te" className={styles.te} /></div>
+   <div><img src={te} alt="te" className={styles.te} onClick={rester}/></div>
    </div>
     
     <div className={styles.bk5}>
-    <div><img src={bk} alt="bk" className={styles.bk} /></div>
+    <div><img src={bk} alt="bk" className={styles.bk} onClick={rester}/></div>
     </div>
 
   <div className={styles.sh6}>
-  <div><img src={sh} alt="sh" className={styles.sh} /></div>
+  <div><img src={sh} alt="sh" className={styles.sh} onClick={rester}/></div>
   </div>
   </div>
 

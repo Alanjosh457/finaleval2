@@ -330,3 +330,17 @@
   width: 500px;
   
 }
+.resicons img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent; /* Default border */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.resicons img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+  border: 2px solid #ff9900; /* Change border color on hover */
+}
+.sr{
+  margin-left: 5%;
+}
